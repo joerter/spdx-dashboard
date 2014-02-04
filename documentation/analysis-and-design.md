@@ -2,7 +2,7 @@
 ## Analysis and Design
 
 ### System Charter and Description
-This is where we will make our system charter.
+Organizations that rely on SPDX documents for Open Source Software (OSS) licence determination, need a tool that provides a high-level overview of such documents. It is difficult for these organizations to drill down through software packages to discover all the involved licences. The SPDX Dashboard addresses this issue by creating a common repository for the upload, retrieval, modification, and sharing of SPDX documents. 
 
 ### System Service Request
 The following is a minimal requirement for the dev environment:
