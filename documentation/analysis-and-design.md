@@ -16,8 +16,8 @@ Currently the stakeholders for this project are:
 * Ajay Medury - Contributor
 * John Oerter - Contributor
 * Seth Hanson - Contributor
-* Prof. Matt Germonprez - Reviewer?
-* Liang Cao - Contributor?
+* Prof. Matt Germonprez - Guidance
+* Liang Cao - Contributor/Guidance
 * Jack Hanneman - Community (TI)
 * Kate Stewart - Community (SPDX)
 * Entire Class with various weights ( we will have the largest direct impact on the Airs and SPDX/NINKA groups)
