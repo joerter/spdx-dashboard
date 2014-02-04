@@ -19,7 +19,7 @@ Currently the stakeholders for this project are:
 * Prof. Matt Germonprez - Reviewer?
 * Liang Cao - Contributor?
 * Jack Hanneman - Community (TI)
-* Kate Stewart - Community
+* Kate Stewart - Community (SPDX)
 * Entire Class with various weights ( we will have the largest direct impact on the Airs and SPDX/NINKA groups)
 * Others to be added...
 
