@@ -1,0 +1,81 @@
+﻿Name: Ajay Medury
+Group: SPDX Dashboard
+
+
+1) Explain how you were involved in the group.
+ 
+Primarily focused on getting the document started with some basic information which the others then added to.
+
+2) What did you specifically contribute to the group? Not, how did you help someone else. 
+
+Wrote the initial draft for all the fields before the Data Flow diagram, and then worked on completing the DF diagram.
+
+3) What would you like me to specifically grade you on because you feel that it is most representative of your work? 
+
+The Data Flow Diagram & Distribution System.
+
+4) How did you coordinate your group activities between the various components? 
+
+Worked on first building the initial basic draft with 1-2 lines for the fields, system service request, stakeholders, communication management plan, and distribution system.
+
+5) What were your experiences and difficulties with this assignment? 
+
+Using markdown to enter most of the fields was fairly simple and easy to use, though trying to insert a table for the change log caused me much trouble and could not getting it in.
+
+6) What are you going to do differently next assignment to overcome these difficulties? 
+
+Looking into a little more documentation to try and utilize markdown to complete the documentation.
+
+Signed Off By: John Oerter, Seth Hanson
+
+
+
+Name: John Oerter
+Group: SPDX Dashboard
+
+
+1) Explain how you were involved in the group. 
+
+Started the GitHub repository and contributed to the assignment.
+
+2) What did you specifically contribute to the group? Not, how did you help someone else. 
+
+I worked specifically on the System Charter and Description.
+
+3) What would you like me to specifically grade you on because you feel that it is most representative of your work? 
+
+The System Charter and Description.
+
+4) How did you coordinate your group activities between the various components? 
+
+I created issues in GitHub to track our progress on learning about the database and finishing the assignment.
+
+5) What were your experiences and difficulties with this assignment? 
+
+The hardest part was understanding the system and expected functionality of the Dashboard. It is pretty well understood now, but will probably still change as we understand it better.
+
+6) What are you going to do differently next assignment to overcome these difficulties? 
+
+Spend more time talking about expectations with the team and professor.
+
+Signed Off By: Ajay Medury, Seth Hanson
+
+
+
+Name: Seth Hanson
+Group: SPDX Dashboard
+
+1) Essentially, I collaborated with my teammates to ensure that the group possessed the necessary knowledge and resources to commence, and complete our project. I have accompanied the group to derive specifications from Liang, the professor as well as additional stakeholders within the class. More specifically, the bulk of my individual contribution has involved documenting the stakeholder and communication sections of the assignment, as well as providing exhaustive, on-going and final draft editing of the documentation.
+
+2) Hitherto, I have assisted in concluding stakeholders involved with the Dashboard project. Moreover, I have co-defined the means of communication that our group will partake in. This further extends to the capabilities of the group to communicate with external parties, as well as a disclaimer expressing the result of the group’s communication or lack thereof.
+
+3) I feel that it would be reasonably fair to evaluate my efforts regarding the Stakeholders section, more specifically, the latter fifty percent. Additionally, the latter 90 percent of the Team Communication Section. In conjunction to the preceding, I have proofread and edited all material included in the group repository. My contribution also extended as the liaison between the group and the professor regarding project specifications.
+
+4) My collaboration efforts included requesting information from my teammates with hopes of optimally assisting the group as a whole. Such involved inquiring about the particular tasks that my team members have already completed, likewise, the incomplete tasks that I could resolve for the team. I strove to attend all group meetings and request information that was not disseminated to me if an absence or early departure occurred.
+
+5) Altogether I found this assignment to be beneficial with respect to establishing the foundation of the project.  Furthermore, I concluded that resolving the particular specifications for each component of our project to exist as the most challenging aspect.  Additionally, I thought that the Dashboard team has worked vigorously, efficiently, and with ideal rapport with each other. 
+
+6) I surmise that I can strive to take more initiative inquiry about specifications and/or additional concerns that I or the group have. To accomplish this, I can collaborate with my group, daily in which to document and stay current on all group related matters. Such includes any information that I may fancy disseminating in attempts to ensure a group knowledge base collective.
+
+Signed by: John Oerter, Ajay Medury
+
