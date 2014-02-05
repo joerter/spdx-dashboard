@@ -2,7 +2,15 @@
 ## Analysis and Design
 
 ### System Charter and Description
-Organizations that rely on SPDX documents for Open Source Software (OSS) licence determination, need a tool that provides a high-level overview of such documents. It is difficult for these organizations to drill down through software packages to discover all the involved licences. The SPDX Dashboard addresses this issue by creating a common repository for the upload, retrieval, modification, and sharing of SPDX documents. 
+The SPDX standard helps organizations track compliance with open source software licenses through the standardization of the way license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. Although this standard creates a much easier avenue for organizations to comply with software licenses, it is still difficult to sift through a large amount of SPDX documents. The SPDX Dashboard addresses this issue by creating a common interface for the upload, retrieval, modification, and sharing of SPDX documents.
+
+The following list describes the main functionality of the completed SPDX Dashboard:
+* Listing of SPDX documents currently held in the database
+* Detailed view of an SPDX document for a single file
+* Detailed view of an SPDX document for a package
+* Edit an SPDX document 
+
+The SPDX Dashboard will communicate with the database through a RESTful web service.
 
 ### System Service Request
 The following is a minimal requirement for the dev environment:
