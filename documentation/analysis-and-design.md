@@ -44,4 +44,13 @@ The image below is the data flow diagram of the SPDX Dashboard
 ![Data Flow Diagram](dataflow.jpg "Data Flow Diagram")
 
 ### Database 
-The current database schema can be downloaded [here](schema.html)
+The current database schema can be downloaded [here](schema.html).
+
+### License Choice
+The MIT License has been chosen for the easiest use of the source code of the SPDX Dashboard. The full license can be downloaded [here](../LICENSE).
+
+### Change Log
+|Version | Date    | Comments                             |
+|--------|---------|--------------------------------------|
+|v0.1    |2/1/2014 |Initial rough draft with placeholders |
+|v1.0    |2/4/2014 |Final draft for Assignment 1          |
