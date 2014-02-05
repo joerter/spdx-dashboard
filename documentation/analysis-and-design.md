@@ -2,22 +2,23 @@
 ## Analysis and Design
 
 ### System Charter and Description
-The SPDX standard helps organizations track compliance with open source software licenses through the standardization of the way license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. Although this standard creates a much easier avenue for organizations to comply with software licenses, it is still difficult to sift through a large amount of SPDX documents. The SPDX Dashboard addresses this issue by creating a common interface for the upload, retrieval, modification, and sharing of SPDX documents.
+The SPDX standard assists organizations track compliance with open source software licenses through the standardization of the method in which license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. Although this standard produces a streamlined avenue for organizations to comply with software licenses, it is still challenging to derive a plethora of SPDX documents. The SPDX Dashboard addresses this issue by creating a common interface for the: upload, retrieval, modification, and sharing of SPDX documents.
 
 The following list describes the main functionality of the completed SPDX Dashboard:
-* Listing of SPDX documents currently held in the database
-* Detailed view of an SPDX document for a single file
-* Detailed view of an SPDX document for a package
-* Edit an SPDX document 
+* Listing of SPDX documents currently held in the database.
+* Detailed view of an SPDX document corresponding to a single file.
+* In-depth view of an SPDX document corresponding to a package.
+* Ability to edit an SPDX document.
+* Signoff functionality.
 
 The SPDX Dashboard will communicate with the database through a RESTful web service.
 
 ### System Service Request
 The following is a minimal requirement for the dev environment:
-* An IDE that can edit and debug JavaScript code
-* A server software that can host the database and any services, locally on the developers machine
-* A database explorer to browse and edit database fields when required
-* A debugging tool to check what values are being sent to the client from the server
+* An IDE that is capable of editing and debugging JavaScript code.
+* A server software that can host the database and any services, locally on the developers machine.
+* A database explorer to browse and edit database fields when required.
+* A debugging tool to check what values are being sent to the client from the server.
 
 ### Stakeholders
 Currently the stakeholders for this project are:
@@ -44,6 +45,7 @@ The image below is the data flow diagram of the SPDX Dashboard
 ![Data Flow Diagram](dataflow.jpg "Data Flow Diagram")
 
 ### Database 
+<<<<<<< HEAD
 The current database schema can be downloaded [here](schema.html).
 
 ### License Choice
@@ -54,3 +56,6 @@ The MIT License has been chosen for the easiest use of the source code of the SP
 |--------|---------|--------------------------------------|
 |v0.1    |2/1/2014 |Initial rough draft with placeholders |
 |v1.0    |2/4/2014 |Final draft for Assignment 1          |
+=======
+The current database schema can be seen [here](schema.html)
+>>>>>>> e129f94d3842eb5689db3c73c72deeb066b8793d
