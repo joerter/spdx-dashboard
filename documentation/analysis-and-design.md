@@ -16,9 +16,9 @@ The SPDX Dashboard will communicate with the database through a RESTful web serv
 ### System Service Request
 The following is a minimal requirement for the dev environment:
 * An IDE that is capable of editing and debugging JavaScript code.
-* A server software that can host the database and any services, locally on the developers machine.
+* A server software that can host the database and any services, locally on the developers' machine.
 * A database explorer to browse and edit database fields when required.
-* A debugging tool to check what values are being sent to the client from the server.
+* A debugging tool to validate if particular values are being sent to the client from the server.
 
 ### Stakeholders
 Currently the stakeholders for this project are:
@@ -29,16 +29,16 @@ Currently the stakeholders for this project are:
 * Liang Cao - Contributor/Guidance
 * Jack Hanneman - Community (TI)
 * Kate Stewart - Community (SPDX)
-* Entire Class with various weights ( we will have the largest direct impact on the Airs and SPDX/NINKA groups)
-* Others to be added...
+* Entire Class with various weights associated to their hold of stake ( we will have the largest direct impact on the Airs and SPDX/NINKA groups)
+
 
 ### Communication Management Plan
-The communication management will be handeled by the following methods:
-* Team Communication - Primarily using phone calls, emails, text messages, and through GitHub. The communication will be handeled on a day by day basis and on days that we do not meet we will co-ordinate work via GitHub or email. The group will strive to communicate all time sensitive material to all relavent parties upon effective completion. Such includes but is not limited to: teams other than our own that are impacted by our performance and are collaborating with, the professor (Matt Germonprez), Liang and any other parties in close correlation to our work. The preceding is based only where applicable with no guarantees with regards to precise swiftness of communication. The Dashboard team will do everything in their power to produce an environment that enables community betterment.
+The communication management will be handled by the following methods:
+* Team Communication - Will proceed primarily using: phone calls, emails, text messages, and also GitHub. The communication will be handled on a day by day basis. With regards to days that the class does not rendezvous; we will co-ordinate work via GitHub or email. The group will strive to communicate all time sensitive material to all relavent parties upon effective completion. Such includes but is not limited to: teams other than our own whom are impacted by our performance and are collaborating with, the professor (Matt Germonprez), Liang and any other parties in close correlation to our work. The preceding is based only where applicable with no guarantees with regards to precise swiftness of communication. The Dashboard team will do everything in their power to produce an environment that enables community betterment.
 * Community Communication - The communication here will primarily be handeled by email, and potentially via voip tools such as Skype in the occasion that virtual meeting is required.
 
 ### Distribution System
-The primary distribution system for assignments and any other information will be through GitHub, as it supports easy collaboration and file sharing mechanisms.
+The primary distribution system for assignments and any other information will be through GitHub, as it supports ideal collaboration and file sharing mechanisms.
 
 ### Data Flow Diagram
 The image below is the data flow diagram of the SPDX Dashboard 
@@ -48,7 +48,7 @@ The image below is the data flow diagram of the SPDX Dashboard
 The current database schema can be downloaded [here](schema.html).
 
 ### License Choice
-The MIT License has been chosen for the easiest use of the source code of the SPDX Dashboard. The full license can be downloaded [here](../LICENSE).
+The MIT License has been chosen as quintessential with regards to the SPDX Dashboard. The full license can be downloaded [here](../LICENSE).
 
 ### Change Log
 |Version | Date    | Comments                             |
