@@ -44,4 +44,4 @@ The image below is the data flow diagram of the SPDX Dashboard
 ![Data Flow Diagram](dataflow.jpg "Data Flow Diagram")
 
 ### Database 
-The current database schema can be seen [here](schema.html)
+The current database schema can be downloaded [here](schema.html)
