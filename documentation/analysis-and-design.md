@@ -38,3 +38,10 @@ The communication management will be handeled by the following methods:
 
 ### Distribution System
 The primary distribution system for assignments and any other information will be through GitHub, as it supports easy collaboration and file sharing mechanisms.
+
+### Data Flow Diagram
+The image below is the data flow diagram of the SPDX Dashboard 
+![Data Flow Diagram](dataflow.jpg "Data Flow Diagram")
+
+### Database 
+The current database schema can be seen [here](schema.html)
