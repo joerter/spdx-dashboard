@@ -19,7 +19,7 @@ app.get('/api/spdxdocs', function(req, res){
             res.end('Error connecting to mysql:' + err+'\n');
         }
 
-        var sql = "select * from spdx.spdx_docs";
+        var sql = "select * from SPDX.spdx_docs";
 
         var query = connection.query(sql, function(err, rows){
             if (err != null) {
@@ -42,7 +42,7 @@ app.get('/api/spdxdocs/:id', function(req, res){
             res.end('Error connecting to mysql:' + err+'\n');
         }
 
-        var sql = "select * from spdx.spdx_docs where id = " + 
+        var sql = "select * from SPDX.spdx_docs where id = " + 
                 connection.escape(req.params.id);
 
         var query = connection.query(sql, function(err, rows){
