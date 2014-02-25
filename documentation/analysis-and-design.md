@@ -68,7 +68,7 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 		To maintain accuracy and accountability with respect to SPDX documents.
 
 ###Installation
-*1.Title
+* 1.Title
 
 
 ### Data Flow Diagram
