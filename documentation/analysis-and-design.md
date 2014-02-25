@@ -41,11 +41,11 @@ The communication management will be handled by the following methods:
 The primary distribution system for assignments and any other information will be through GitHub, as it supports ideal collaboration and file sharing mechanisms.
 
 
-##Code Management
+###Code Management
 All code sent to the SPDX Dashboard group will be managed through Pull Requests (https://help.github.com/articles/using-pull-requests) in GitHub.  Following the pull request, the submitted code will be reviewed by all members of the Dashboard team. If the submitted code is accepted, the Dashboard team will pull the code and add it to the SPDX Dashboard repository. (Will we notify peeps if it has been accepted?)
 
-## Use Cases
-###Editing
+### Use Cases
+####Editing
 * 1.Title : document is edited
 * 2. Primary Actor: Dashboard User
 * 3. Goal in Context:  To update existing information in a SPDX document
@@ -59,7 +59,7 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 * 8: Trigger:
 * 9:Notes:
 	
-###Signoff
+####Signoff
 * 1.Title: User signoff on SPDX document
 * 2. Primary Actor: Authoritative User
 * 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
@@ -67,7 +67,7 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 	1. User
 		To maintain accuracy and accountability with respect to SPDX documents.
 
-###Installation
+####Installation
 * 1.Title
 
 
