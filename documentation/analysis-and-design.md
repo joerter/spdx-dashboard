@@ -48,27 +48,27 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 ###Editing
 * 1.Title : document is edited
 * 2. Primary Actor: Dashboard User
-3. Goal in Context:  To update existing information in a SPDX document
-4. Stakeholders and Interests:
+* 3. Goal in Context:  To update existing information in a SPDX document
+* 4. Stakeholders and Interests:
 	1. User
 		To alter preexisting data that may be incorrect or outdated.
 		To include data that may have been previously absent (license assertions).
-5. Preconditions:
-6. Main Success Scenario:
-7. Failed End Condition:
-8: Trigger:
-9:Notes:
+* 5. Preconditions:
+* 6. Main Success Scenario:
+* 7. Failed End Condition:
+* 8: Trigger:
+* 9:Notes:
 	
 ###Signoff
-1.Title: User signoff on SPDX document
-2. Primary Actor: Authoritative User
-3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
-4. Stakeholders and Interests:
+* 1.Title: User signoff on SPDX document
+* 2. Primary Actor: Authoritative User
+* 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
+* 4. Stakeholders and Interests:
 	1. User
 		To maintain accuracy and accountability with respect to SPDX documents.
 
 ###Installation
-1.Title
+*1.Title
 
 
 ### Data Flow Diagram
