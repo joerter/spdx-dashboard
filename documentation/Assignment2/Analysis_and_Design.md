@@ -73,7 +73,7 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 
 ### Data Flow Diagram
 The image below is the data flow diagram of the SPDX Dashboard 
-![Data Flow Diagram](dataflow.jpg "Data Flow Diagram")
+![Data Flow Diagram](SPDX_Dashboard_DFD_02.25.2014.jpg "Data Flow Diagram")
 
 ### Database 
 The current database schema can be downloaded [here](schema.html).
@@ -84,5 +84,4 @@ The MIT License has been chosen as quintessential with regards to the SPDX Dashb
 ### Change Log
 |Version | Date    | Comments                             |
 |--------|---------|--------------------------------------|
-|v0.1    |2/1/2014 |Copied over the existing information from the previous A&D document|
-|v1.0    |2/4/2014 |Final draft for Assignment 1          |
+|v0.1    |2/26/2014 |Copied over the existing information from the previous A&D document|
