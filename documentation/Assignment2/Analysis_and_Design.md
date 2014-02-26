@@ -61,14 +61,14 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 	
 ####Signoff
 * 1.Title: User signoff on SPDX document
-* 2. Primary Actor:User with approval privileges
+* 2. Primary Actor:Authoritative User
 * 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
 * 4. Stakeholders and Interests:
 	1. User
 		To maintain accuracy and accountability with respect to SPDX documents.
 *5. Preconditions:
 *6. Main Success Scenario:
-*7. Failed End Condition:
+*7. Failed End Condition:Signoff User
 *8.Trigger:
 *9.Notes:
 ####Installation
