@@ -27,9 +27,9 @@ Currently the stakeholders for this project are:
 * Seth Hanson - Contributor
 * Prof. Matt Germonprez - Guidance
 * Liang Cao - Contributor/Guidance
-* Jack Hanneman - Community (TI)
+* Jack Manbeck - Community (TI)
 * Kate Stewart - Community (SPDX)
-* Entire Class with various weights associated to their hold of stake ( we will have the largest direct impact on the Airs and Yocto groups)
+* Entire Class to varying degrees associated to their hold of stake ( we will have the largest direct impact on the Airs and Yocto groups)
 
 
 ### Communication Management Plan
@@ -54,22 +54,35 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 		To alter preexisting data that may be incorrect or outdated.
 		To include data that may have been previously absent (license assertions).
 * 5. Preconditions:
-* 6. Main Success Scenario:
-* 7. Failed End Condition:
-* 8: Trigger:
-* 9:Notes:
+* 6. Main Success Scenario:User updates SPDX document information in which the information is stored with full integrity.
+* 7. Failed End Condition:User updates are not stored or are inaccurate. 
+* 8. Trigger:
+* 9.Notes:
 	
 ####Signoff
 * 1.Title: User signoff on SPDX document
-* 2. Primary Actor: Authoritative User
+* 2. Primary Actor:User with approval privileges
 * 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
 * 4. Stakeholders and Interests:
 	1. User
 		To maintain accuracy and accountability with respect to SPDX documents.
-
+*5. Preconditions:
+*6. Main Success Scenario:
+*7. Failed End Condition:
+*8.Trigger:
+*9.Notes:
 ####Installation
-* 1.Title
-
+* 1.Title: 
+* 2. Primary Actor:
+* 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
+* 4. Stakeholders and Interests:
+	1. User
+		To maintain accuracy and accountability with respect to SPDX documents.
+*5. Preconditions:
+*6. Main Success Scenario:
+*7. Failed End Condition:
+*8.Trigger:
+*9.Notes:
 
 ### Data Flow Diagram
 The image below is the data flow diagram of the SPDX Dashboard 
