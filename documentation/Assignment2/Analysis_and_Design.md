@@ -84,4 +84,5 @@ The MIT License has been chosen as quintessential with regards to the SPDX Dashb
 ### Change Log
 |Version | Date    | Comments                             |
 |--------|---------|--------------------------------------|
-|v0.1    |2/26/2014 |Copied over the existing information from the previous A&D document|
+|v0.1    |2/26/2014|Copied over the existing information from the previous A&D document|
+|v0.2	 |2/26/2014|Added new DFD according to new specifications|
