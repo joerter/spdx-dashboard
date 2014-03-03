@@ -52,11 +52,11 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 * 4. Stakeholders and Interests:
 	1. User
 		To alter preexisting data that may be incorrect or outdated.
-		To include data that may have been previously absent (license assertions).
-* 5. Preconditions:SPDX document exists as well the need for updated documents.
-* 6. Main Success Scenario:User updates SPDX document information in which the information is stored with full integrity.
-* 7. Failed End Condition:User updates are not stored or are inaccurate. 
-* 8. Trigger:Dashboard user navigates to the update page and clicks the edit button.
+		To include data that may have been previously absent (license assertions)
+* 5. Preconditions:SPDX document exists as well the need for updated documents
+* 6. Main Success Scenario:User updates SPDX document information in which the information is stored with full integrity
+* 7. Failed End Condition:User updates are not stored or are inaccurate 
+* 8. Trigger:Dashboard user navigates to the update page and clicks the edit button
 * 9.Notes:
 	
 ####Signoff
@@ -69,7 +69,7 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 	2. Authoritative User 
 	3. 	To approve or reject SPDX documents based on license accuracy
 *5. Preconditions:Dashboard user records SPDX information pertinent to a particular package and submits the information for approval
-*6. Main Success Scenario:The authoritative user approves Dashboard user's generated SPDX document.
+*6. Main Success Scenario:The authoritative user approves Dashboard user's generated SPDX document
 *7. Failed End Condition:Dashboard user's SDPX document is not approved
 *8.Trigger:Dashboard user submits 
 *9.Notes:
