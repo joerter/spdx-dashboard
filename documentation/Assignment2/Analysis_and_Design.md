@@ -64,24 +64,24 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 * 2. Primary Actor:Authoritative User
 * 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
 * 4. Stakeholders and Interests:
-	1. User
+	1. Dashboard User
 		To maintain accuracy and accountability with respect to SPDX documents.
-*5. Preconditions:
-*6. Main Success Scenario:
+*5. Preconditions:Dashboard user records SPDX information pertinent to a particular package and submits the information for approval.
+*6. Main Success Scenario:The authoritative user approves Dashboard user's generated SPDX document.
 *7. Failed End Condition:Signoff User
 *8.Trigger:
 *9.Notes:
-####Installation
-* 1.Title: 
-* 2. Primary Actor:
-* 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
+####Search/List
+* 1.Title:User searches and lists current SPDX documents 
+* 2. Primary Actor:Dashboard User
+* 3. Goal in Context: To search for and list current SPDX documents stored in the database.
 * 4. Stakeholders and Interests:
 	1. User
 		To maintain accuracy and accountability with respect to SPDX documents.
-*5. Preconditions:
-*6. Main Success Scenario:
-*7. Failed End Condition:
-*8.Trigger:
+*5. Preconditions:Data is stored in the database, user has a web browser installed.
+*6. Main Success Scenario:The Dashboard user can list current SPDX documents as well as search for speci
+*7. Failed End Condition:Dashboard user cannot view the current SDPX docements via the Dashboard.
+*8.Trigger:Dashboard user visits the Dashboard website and clicks on the list/search buttons.
 *9.Notes:
 
 ### Data Flow Diagram
