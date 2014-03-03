@@ -51,8 +51,8 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 * 3. Goal in Context:To update existing information in a SPDX document
 * 4. Stakeholders and Interests:
 	1. User
-		1.To alter preexisting data that may be incorrect or outdated.
-		2.To include data that may have been previously absent (license assertions)
+		1. To alter preexisting data that may be incorrect or outdated.
+		2. To include data that may have been previously absent (license assertions)
 * 5. Preconditions:SPDX document exists as well the need for updated documents
 * 6. Main Success Scenario:User updates SPDX document information in which the information is stored with full integrity
 * 7. Failed End Condition:User updates are not stored or are inaccurate 
@@ -80,7 +80,7 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 * 3. Goal in Context: To search for and list current SPDX documents stored in the database
 * 4. Stakeholders and Interests:
 	1. User
-		1.To maintain accuracy and accountability with respect to SPDX documents
+		1. To maintain accuracy and accountability with respect to SPDX documents
 *5. Preconditions:Data is stored in the database, user has a web browser installed
 *6. Main Success Scenario:The Dashboard user can list current SPDX documents as well as search for specific SPDX documents
 *7. Failed End Condition:Dashboard user cannot view the current SDPX docements via the Dashboard
