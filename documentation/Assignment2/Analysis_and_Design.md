@@ -48,7 +48,7 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 ####Editing
 * 1.Title: document is edited
 * 2. Primary Actor: Dashboard User
-* 3. Goal in Context:To update existing information in a SPDX document
+* 3. Goal in Context: To update existing information in a SPDX document
 * 4. Stakeholders and Interests:
 	1. User
 		1. To alter preexisting data that may be incorrect or outdated.
