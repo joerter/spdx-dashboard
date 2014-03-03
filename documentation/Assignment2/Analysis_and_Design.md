@@ -65,9 +65,9 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 * 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
 * 4. Stakeholders and Interests:
 	1. Dashboard User
-		1.To receive approval from authoritative user in generating SPDX documents
+		1.1 To receive approval from authoritative user in generating SPDX documents
 	2. Authoritative User 
-	 	1.To approve or reject SPDX documents based on license accuracy
+	 	2.2 To approve or reject SPDX documents based on license accuracy
 *5. Preconditions:Dashboard user records SPDX information pertinent to a particular package and submits the information for approval
 *6. Main Success Scenario:The authoritative user approves Dashboard user's generated SPDX document
 *7. Failed End Condition:Dashboard user's SDPX document is not approved
