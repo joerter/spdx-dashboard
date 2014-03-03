@@ -1,0 +1,698 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+<HEAD>
+	
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.3.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Zac">
+	<META NAME="CREATED" CONTENT="20140224;185746000000000">
+	<META NAME="CHANGEDBY" CONTENT="Zac">
+	<META NAME="CHANGED" CONTENT="20140224;202637000000000">
+	
+	<STYLE>
+		<!-- 
+		BODY,DIV,TABLE,THEAD,TBODY,TFOOT,TR,TH,TD,P { font-family:"Calibri"; font-size:x-small }
+		 -->
+	</STYLE>
+	
+</HEAD>
+
+<BODY TEXT="#000000">
+<TABLE CELLSPACING="0" COLS="4" BORDER="0">
+	<COLGROUP WIDTH="257"></COLGROUP>
+	<COLGROUP WIDTH="343"></COLGROUP>
+	<COLGROUP WIDTH="111"></COLGROUP>
+	<COLGROUP WIDTH="363"></COLGROUP>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><B><FONT FACE="Times New Roman" COLOR="#000000">Table Name</FONT></B></TD>
+		<TD ALIGN="LEFT"><B><FONT COLOR="#000000">Column Name</FONT></B></TD>
+		<TD ALIGN="LEFT"><B><FONT COLOR="#000000">Datatype</FONT></B></TD>
+		<TD ALIGN="LEFT"><B><FONT COLOR="#000000">Constraints</FONT></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000">spdx_docs</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">spdx_version</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">data_license</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">upload_file_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">upload_content_type</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">upload_file_size</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">upload_updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">document_comment</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">packages</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_file_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_download_location</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_copyright_text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_version</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_description</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_summary</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_originator</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_supplier</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_license_concluded</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_license_declared</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_checksum</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">checksum_algorithm</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_home_page</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_source_info</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_license_info_from_files</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_license_comments</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_verification_code</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_verification_code_excluded_file</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_files</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_type</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_copyright_text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">artifact_of_project_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">artifact_of_project_homepage</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">artifact_of_project_uri</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_concluded</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_info_in_file</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_checksum</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_checksum_algorithm</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">relative_path</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_comments</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_notice</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_contributor</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_dependency</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">file_comment</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">licenses</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">extracted_text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">osi_approved</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">standard_license_header</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_cross_reference</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">doc_license_associations</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">spdx_doc_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null, FK(spdx_docs(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null, FK(licenses(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_identifer</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_comment</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">licensings</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_file_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(packages_files(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">juncture</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">doc_license_association_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(doc_license_associations(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">doc_file_package_associations</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">spdx_doc_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(spdx_docs(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(packages(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">package_file_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(package_files(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">creators</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">generated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">creator_comments</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">license_list_version</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">spdx_doc_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(spdx_docs(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">creator</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">reviewers</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">reviewer_date</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">reviewer_comment</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">spdx_doc_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(spdx_docs(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">reviewer</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT FACE="Times New Roman" COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000">products</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">product_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">product_type</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">product_description</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">parent_product_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">FK(products(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000">product_software</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">software_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(software(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">product_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(products(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">package_id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">int(11)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null,FK(packages(id))</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000">software</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">id</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">int(11)(11l)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Auto Increment, Not Null, unique</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">software_name</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">software_version</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">varchar(255)</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">software_description</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">text</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">created_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">Not Null</FONT></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="20" ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">updated_at</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000">datetime</FONT></TD>
+		<TD ALIGN="LEFT"><FONT COLOR="#000000"><BR></FONT></TD>
+	</TR>
+</TABLE>
+<!-- ************************************************************************** -->
+</BODY>
+
+</HTML>
