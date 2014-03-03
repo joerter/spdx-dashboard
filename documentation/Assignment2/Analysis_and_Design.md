@@ -42,7 +42,7 @@ The primary distribution system for assignments and any other information will b
 
 
 ###Code Management
-All code sent to the SPDX Dashboard group will be managed through Pull Requests (https://help.github.com/articles/using-pull-requests) in GitHub.  Following the pull request, the submitted code will be reviewed by all members of the Dashboard team. If the submitted code is accepted, the Dashboard team will pull the code and add it to the SPDX Dashboard repository. (Will we notify peeps if it has been accepted?)
+All code sent to the SPDX Dashboard group will be managed through Pull Requests (https://help.github.com/articles/using-pull-requests) in GitHub.  Following the pull request, the submitted code will be reviewed by all members of the Dashboard team. If the submitted code is accepted, the Dashboard team will pull the code and add it to the SPDX Dashboard repository. Following, the party that submitted the pull request will receive notification that their submission has been accepted.
 
 ### Use Cases
 ####Editing
@@ -53,10 +53,10 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 	1. User
 		To alter preexisting data that may be incorrect or outdated.
 		To include data that may have been previously absent (license assertions).
-* 5. Preconditions:
+* 5. Preconditions:SPDX document exists as well the need for updated documents.
 * 6. Main Success Scenario:User updates SPDX document information in which the information is stored with full integrity.
 * 7. Failed End Condition:User updates are not stored or are inaccurate. 
-* 8. Trigger:
+* 8. Trigger:Dashboard user navigates to the update page and clicks the edit button.
 * 9.Notes:
 	
 ####Signoff
@@ -65,23 +65,25 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 * 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
 * 4. Stakeholders and Interests:
 	1. Dashboard User
-		To maintain accuracy and accountability with respect to SPDX documents.
-*5. Preconditions:Dashboard user records SPDX information pertinent to a particular package and submits the information for approval.
+		To receive approval from authoritative user in generating SPDX documents
+	2. Authoritative User 
+	3. 	To approve or reject SPDX documents based on license accuracy
+*5. Preconditions:Dashboard user records SPDX information pertinent to a particular package and submits the information for approval
 *6. Main Success Scenario:The authoritative user approves Dashboard user's generated SPDX document.
-*7. Failed End Condition:Signoff User
-*8.Trigger:
+*7. Failed End Condition:Dashboard user's SDPX document is not approved
+*8.Trigger:Dashboard user submits 
 *9.Notes:
 ####Search/List
 * 1.Title:User searches and lists current SPDX documents 
 * 2. Primary Actor:Dashboard User
-* 3. Goal in Context: To search for and list current SPDX documents stored in the database.
+* 3. Goal in Context: To search for and list current SPDX documents stored in the database
 * 4. Stakeholders and Interests:
 	1. User
-		To maintain accuracy and accountability with respect to SPDX documents.
-*5. Preconditions:Data is stored in the database, user has a web browser installed.
-*6. Main Success Scenario:The Dashboard user can list current SPDX documents as well as search for speci
-*7. Failed End Condition:Dashboard user cannot view the current SDPX docements via the Dashboard.
-*8.Trigger:Dashboard user visits the Dashboard website and clicks on the list/search buttons.
+		To maintain accuracy and accountability with respect to SPDX documents
+*5. Preconditions:Data is stored in the database, user has a web browser installed
+*6. Main Success Scenario:The Dashboard user can list current SPDX documents as well as search for specific SPDX documents
+*7. Failed End Condition:Dashboard user cannot view the current SDPX docements via the Dashboard
+*8.Trigger:Dashboard user visits the Dashboard website and clicks on the list/search buttons
 *9.Notes:
 
 ### Data Flow Diagram
