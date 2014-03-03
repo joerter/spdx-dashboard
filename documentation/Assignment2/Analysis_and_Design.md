@@ -2,7 +2,11 @@
 ## Analysis and Design
 
 ### System Charter and Description
-The SPDX standard assists organizations in tracking compliance with open source software licenses through the standardization of the method in which license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. Although this standard produces a streamlined avenue for organizations to comply with software licenses, it is still challenging to produce many SPDX documents.  The SPDX Dashboard addresses this issue by creating a common interface for the: upload, retrieval, modification, and sharing of SPDX documents.
+The SPDX standard assists organizations in tracking compliance with open source software licenses through the standardization of the method in which license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. More information about SPDX can be found [here](http://spdx.org/about-spdx/what-is-spdx).
+
+The SPDX open source tools is an effort by the University of Nebraska Omaha to support the SPDX community with openly developed tools for integrating SPDX with other efforts such as the FOSSology and Yocto projects. Visit the [SPDX Hub](http://spdxhub.ist.unomaha.edu/) for more information.
+
+The SPDX Dashboard fits into this space by creating a common interface for the upload, retrieval, modification, and sharing of SPDX documents. It will consume SPDX documents created through the [FOSSology+Ninka](https://github.com/ryanv09/ninkology) and [Yocto](https://github.com/chaughawout/Poky/) projects and house an environment to display data from the [Product History Utility](https://github.com/zwmcfarland/ProductHistoryUtility).
 
 The following list describes the main functionality of the completed SPDX Dashboard:
 * Listing of SPDX documents currently held in the database.
@@ -58,7 +62,9 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
  6. Main Success Scenario:User updates SPDX document information in which the information is stored with full integrity
  7. Failed End Condition:User updates are not stored or are inaccurate 
  8. Trigger: Dashboard user navigates to the update page and clicks the edit button
- 9. Notes:
+ 9. Notes: See Mockup section for a screen shot of this use case.
+ 
+
 	
 ####Signoff
 1. Title: User signoff on SPDX document
@@ -86,14 +92,32 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 6. Main Success Scenario:The Dashboard user can list current SPDX documents as well as search for specific SPDX documents
 7. Failed End Condition: Dashboard user cannot view the current SDPX docements via the Dashboard
 8. Trigger: Dashboard user visits the Dashboard website and clicks on the list/search buttons
-9. Notes:
+9. Notes: See the mockup section for a screen shot of this use case.
 
 ### Data Flow Diagram
 The image below is the data flow diagram of the SPDX Dashboard 
 ![Data Flow Diagram](SPDX_Dashboard_DFD_02.25.2014.jpg "Data Flow Diagram")
 
 ### Database 
-The current database schema can be downloaded [here](schema.html).
+The current database schema can be downloaded [here](db_schema.html).
+#### Data Access
+The Dashboard requires a RESTful API to communicate with the database. This is currently under development, and the following methods have been implemented:
+GET api/spdx_docs // Returns all spdx docs in the database
+GET api/spdx_docs/id // Returns the spdx doc with the given id
+
+GET api/creators // Returns all spdx docs in the database
+GET api/spdx_docs/id // Returns the spdx doc with the given id
+
+GET api/spdx_docs // Returns all spdx docs in the database
+GET api/spdx_docs/id // Returns the spdx doc with the given id
+
+GET api/spdx_docs // Returns all spdx docs in the database
+GET api/spdx_docs/id // Returns the spdx doc with the given id
+
+GET api/spdx_docs // Returns all spdx docs in the database
+GET api/spdx_docs/id // Returns the spdx doc with the given id
+
+
 
 ### License Choice
 The MIT License has been chosen with regards to the SPDX Dashboard. The full license can be downloaded [here](../LICENSE).
@@ -103,3 +127,4 @@ The MIT License has been chosen with regards to the SPDX Dashboard. The full lic
 |--------|---------|--------------------------------------|
 |v0.1    |2/26/2014|Copied over the existing information from the previous A&D document|
 |v0.2	 |2/26/2014|Added new DFD according to new specifications|
+|v0.5	 |3/2/2014 |Added use cases. Updated System charter
