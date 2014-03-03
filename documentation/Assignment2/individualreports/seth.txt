@@ -1,0 +1,18 @@
+Name: Seth Hanson
+Group: SPDX Dashboard
+
+	
+1) Explain how you were involved in the group. 	1)	With respect to the group, conversed with my teammates to define what we envisioned in the use case scenarios. By collaborating in this process, I feel that I was better able to understand the end result that we our striving for in the Dashboard, as well as producing a higher quality use case documentation. Also, I researched the capabilities of Restful APIs in order for our team to adequately manipulate its functionality with regards to our development. 
+
+2) What did you specifically contribute to the group? Not, how did you help someone else. 	For section 2 of the project I worked on all of the section 1 revisions outlined by the professor. Such included: System Charter and Description, System Service Request, Stakeholders, Communication Management Plan and license choice. Moreover, I produced the written portion of the use cases (everything excluding the visuals).
+
+3) What would you like me to specifically grade you on because you feel that it is most representative of your work? 	With regards to grades, I feel that it is acceptable to grade me on the use case documentation as well as the revisions described above.
+
+4) How did you coordinate your group activities between the various components? 	In order to coordinate activities I called, texted and email John and Ajay to ask them how I could contribute to the group. Furthermore, I would notify my group with the preceding communication methods as well as in person discussion in class and at our residences. More specifically, I would contact my group every day or so to converse over the status of the project and whether we should contact other groups and/or the professor to further our current goals.
+
+5) What were your experiences and difficulties with this assignment? 	This assignment entailed much more work due to the fact that it’s essentially the bond between the initial brainstorming phase and the end result. Thus, challenges included: not knowing particular definitions of what was required of the team. Even more so was the challenge of concluding our collective work due to the fire in building G. More specifically, the entire DFD was lost in which Ajay had to recreate it. Furthermore, with the reallocation of dorm residents, it made it rather challenging to schedule group meetings. Conclusively, the markdown language was not without trial in which it took considerable time to resolve the desired formatting.
+
+6) What are you going to do differently next assignment to overcome these difficulties? 	To account for the preceding challenges, I have made note of the markdown language formatting that John has revealed to me. Thus, it should go smoother when I need to produce updates for assignment 3. Following, I will continue to ask questions regarding the particulars of what is required of the team so that we may all perform optimally.
+
+Signed Off By: John Oerter, Ajay Medury
+
