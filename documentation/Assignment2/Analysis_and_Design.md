@@ -46,13 +46,13 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 
 ### Use Cases
 ####Editing
-* 1.Title : document is edited
+* 1.Title: document is edited
 * 2. Primary Actor: Dashboard User
-* 3. Goal in Context:  To update existing information in a SPDX document
+* 3. Goal in Context:To update existing information in a SPDX document
 * 4. Stakeholders and Interests:
 	1. User
-		To alter preexisting data that may be incorrect or outdated.
-		To include data that may have been previously absent (license assertions)
+		1.To alter preexisting data that may be incorrect or outdated.
+		2.To include data that may have been previously absent (license assertions)
 * 5. Preconditions:SPDX document exists as well the need for updated documents
 * 6. Main Success Scenario:User updates SPDX document information in which the information is stored with full integrity
 * 7. Failed End Condition:User updates are not stored or are inaccurate 
@@ -65,21 +65,22 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 * 3. Goal in Context: To Approve the specifications associated with a SPDX document; especially in the case of license assertions.
 * 4. Stakeholders and Interests:
 	1. Dashboard User
-		To receive approval from authoritative user in generating SPDX documents
+		1.To receive approval from authoritative user in generating SPDX documents
 	2. Authoritative User 
-	3. 	To approve or reject SPDX documents based on license accuracy
+	 	1.To approve or reject SPDX documents based on license accuracy
 *5. Preconditions:Dashboard user records SPDX information pertinent to a particular package and submits the information for approval
 *6. Main Success Scenario:The authoritative user approves Dashboard user's generated SPDX document
 *7. Failed End Condition:Dashboard user's SDPX document is not approved
 *8.Trigger:Dashboard user submits 
 *9.Notes:
+
 ####Search/List
 * 1.Title:User searches and lists current SPDX documents 
 * 2. Primary Actor:Dashboard User
 * 3. Goal in Context: To search for and list current SPDX documents stored in the database
 * 4. Stakeholders and Interests:
 	1. User
-		To maintain accuracy and accountability with respect to SPDX documents
+		1.To maintain accuracy and accountability with respect to SPDX documents
 *5. Preconditions:Data is stored in the database, user has a web browser installed
 *6. Main Success Scenario:The Dashboard user can list current SPDX documents as well as search for specific SPDX documents
 *7. Failed End Condition:Dashboard user cannot view the current SDPX docements via the Dashboard
