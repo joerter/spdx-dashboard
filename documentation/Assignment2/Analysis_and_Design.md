@@ -94,17 +94,25 @@ All code sent to the SPDX Dashboard group will be managed through Pull Requests 
 8. Trigger: Dashboard user visits the Dashboard website and clicks on the list/search buttons
 9. Notes: See the mockup section for a screen shot of this use case.
 
+####Mockups
+![List View](listview.png)
+![Document View](docview.png)
+![Edit 1](edit1.png)
+![Edit 2](edit2.png)
+![Updated](updatedview.png)
+
+
 ### Data Flow Diagram
 The image below is the data flow diagram of the SPDX Dashboard 
-![Data Flow Diagram](SPDX_Dashboard_DFD_02.25.2014.jpg "Data Flow Diagram")
+![Data Flow Diagram](dfd.jpg "Data Flow Diagram")
 
 ### Database 
 The current database schema can be downloaded [here](db_schema.html).
 #### Data Access
 The Dashboard requires a RESTful API to communicate with the database. This is currently under development. Methods follow the following standard:  
-`api/(table_name)  `
-`api/(table_name)/id ` 
-`api/(table_name)?key=value  `
+`api/(table_name)`  
+`api/(table_name)/id`   
+`api/(table_name)?key=value`  
 
 The following methods have been implemented so far:  
 `GET api/spdx_docs // Returns all spdx docs in the database`  
@@ -136,6 +144,8 @@ The following methods have been implemented so far:
 
 `GET api/software // Returns all software in the database`     
 `GET api/software/id // Returns the software with the given id`  
+
+The code for the API to communicate with the database can be found [here](../../src/api)
 
 ### License Choice
 The MIT License has been chosen with regards to the SPDX Dashboard. The full license can be downloaded [here](../LICENSE).
