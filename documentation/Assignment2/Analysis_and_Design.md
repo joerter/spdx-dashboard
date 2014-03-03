@@ -2,7 +2,7 @@
 ## Analysis and Design
 
 ### System Charter and Description
-The SPDX standard assists organizations in tracking compliance with open source software licenses through the standardization of the method in which license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. Although this standard produces a streamlined avenue for organizations to comply with software licenses, it is still challenging to derive a plethora of SPDX documents. The SPDX Dashboard addresses this issue by creating a common interface for the: upload, retrieval, modification, and sharing of SPDX documents.
+The SPDX standard assists organizations in tracking compliance with open source software licenses through the standardization of the method in which license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. Although this standard produces a streamlined avenue for organizations to comply with software licenses, it is still challenging to produce many SPDX documents.  The SPDX Dashboard addresses this issue by creating a common interface for the: upload, retrieval, modification, and sharing of SPDX documents.
 
 The following list describes the main functionality of the completed SPDX Dashboard:
 * Listing of SPDX documents currently held in the database.
