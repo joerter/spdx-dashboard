@@ -25,11 +25,14 @@ This was done mostly in person in class and additional meetings.
 
 5) What were your experiences and difficulties with this assignment?
 
-The DFD was rather challenging this time around as trying to understand how to deal with document signoff was more complex than expected. Once I figured that out, it was a little easier to build the DFD, though; there are still changes to be made to it as we figure out how to fix issues as we advance.
+The DFD was rather challenging this time around as trying to understand how to deal with document signoff 
+was more complex than expected. Once I figured that out, it was a little easier to build the DFD, 
+though; there are still changes to be made to it as we figure out how to fix issues as we advance.
 The rest of the DFD was not nearly as bad after some pointers from the instructor.
 
 6) What are you going to do differently next assignment to overcome these difficulties?
 
-Assignment 3 will certainly require much more coordination and planning on all our parts and that will be essential in building the application as we desire, and up to expectations.
+Assignment 3 will certainly require much more coordination and planning on all our parts and 
+that will be essential in building the application as we desire, and up to expectations.
 
 Signed Off By: John Oerter, Seth Hanson
