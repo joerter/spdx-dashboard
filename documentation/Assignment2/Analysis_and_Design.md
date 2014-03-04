@@ -157,3 +157,4 @@ The MIT License has been chosen with regards to the SPDX Dashboard. The full lic
 |v0.2	 |2/26/2014|Added new DFD according to new specifications|
 |v0.3	 |3/2/2014 |Added use cases. Updated System charter
 |v0.4    |3/3/2014 |Added API documentation
+|v1.0	 |3/3/2014 |Reviewed and ready for Submission|
