@@ -13,6 +13,53 @@ var pool = mysql.createPool({
 });
 
 //************************************************************
+// spdx
+// ***********************************************************
+
+// GET api/spdx
+//
+// This method returns an spdx document in json format
+app.get('/api/spdx', function(req, res){
+    pool.getConnection(function(err, connection) {
+        if(err != null) {
+            res.end('Error connecting to mysql:' + err+'\n');
+        }
+
+        var sql = 
+	    	"SELECT " +
+	        	"spdx_version, data_license, document_comment, creator, creators.created_at, creator_comments, package_name, package_version, package_download_location, package_summary, package_file_name, package_supplier, package_originator, package_checksum, package_verification_code, package_description,package_copyright_text, package_license_declared, package_license_concluded, package_license_info_from_files" +
+	    	" FROM " +
+	        	"spdx_docs" +
+	    	" LEFT JOIN " + 
+	        	"creators" + 
+	    	" ON " + 
+	        	"spdx_docs.id = creators.spdx_doc_id" +
+	    	" LEFT JOIN " +
+	        	"doc_file_package_associations" +
+	    	" ON " +
+	        	"spdx_docs.id = doc_file_package_associations.spdx_doc_id" +
+	    	" LEFT JOIN " + 
+	        	"packages" +
+	    	" ON " +
+	        	"doc_file_package_associations.package_id = packages.id" +
+		" GROUP BY " +
+		    	"spdx_docs.id";
+
+        var query = connection.query(sql, function(err, rows){
+            if (err != null) {
+                res.end("Query error:" + err);
+            } else {
+                res.send(rows);
+            }
+            // Release this connection
+            connection.release();
+        });
+
+        console.log(query.sql);
+    });
+});
+
+//************************************************************
 // spdx_docs
 //************************************************************
 
