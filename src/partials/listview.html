@@ -5,14 +5,15 @@
 </div>
 <table class="table table-bordered table-spdx">
 	<tbody>
-	<tr>
+	<tr ng-repeat="doc in docs">
 		<td class="td-timestamp">
 			<p class="graybox">
 			<span class="glyphicon glyphicon-time"></span>
+            {{doc.created_at}}
 			</p> 
 		</td>
 		<td class="td-main">
-			<a href="#">{{filename}}</a>
+			<a href="#">{{doc.package_file_name}}</a>
 		</td>
 		<td class="td-controls graybox">
 			<div class="btn-toolbar" role="toolbar">
