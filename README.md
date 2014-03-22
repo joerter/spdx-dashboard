@@ -1,9 +1,7 @@
 spdx-dashboard
 ==============
 
-SPDX Dashboard
-
-Overview
+###Overview
 
 The SPDX standard assists organizations in tracking compliance with open source software licenses through the standardization of the method in which license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. More information about SPDX can be found [here](http://spdx.org/about-spdx/what-is-spdx).
 
@@ -20,27 +18,34 @@ The following list describes the main functionality of the completed SPDX Dashbo
 * Integrate with Productization component.
 * The SPDX Dashboard will communicate with the database through a RESTful web service.
 
-Version
+###Version
 
 View current stable version [here](http://joerter.github.io/spdx-dashboard/ "SPDX Dashboard")
 
-License
+###License
 
 The Apache 2 License has been chosen with regards to the SPDX Dashboard code. The full license can be downloaded [here](../LICENSE).
 
 The Creative Commons has been selected for all documentation. The full license can be downloaded [here]
 
-Copyright
+###Copyright
 
-Technical Specifications
+###Technical Specifications
 
-System Design
+The following is a minimal requirement for the dev environment:
+* VIM/Notepad++ for development
+* Environment: OS: Ubuntu 12.04,FOSSology: 2.2.0(default configuration),SPDX: 1.1 sepc
+* MySQL
+* Chrome/Firefox dev tools for debugging values sent between the client and server.
+* Postman for API testing
+ 
+###System Design
 The image below is the data flow diagram of the SPDX Dashboard 
 ![Data Flow Diagram](dfd.jpg "Data Flow Diagram")
 
-Installation
+###Installation
 
-Usage
+###Usage
 
 ####Editing
  1. Title: document is edited
@@ -92,9 +97,11 @@ Usage
 ![Edit 1](edit1.png)
 ![Edit 2](edit2.png)
 ![Updated](updatedview.png)
-Communities of Interest
 
-Communication
+###Communities of Interest
 
-Code Management
+###Communication
 
+This will primarily be handeled by email lists such as SPDX-tech and SPDX-legal. Moreover, voip tools such as Skype may be used in the occasion that a virtual meeting is required.
+
+###Code Management
