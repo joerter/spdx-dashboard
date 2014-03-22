@@ -3,6 +3,28 @@ spdx-dashboard
 
 SPDX Dashboard
 
+Overview
+
+Version
+
+License
+
+Copyright
+
+Technical Specifications
+
+System Design
+
+Installation
+
+Usage
+
+Communities of Interest
+
+Communication
+
+Code Management
+
 View current stable version [here](http://joerter.github.io/spdx-dashboard/ "SPDX Dashboard")
 
 The SPDX standard assists organizations in tracking compliance with open source software licenses through the standardization of the method in which license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. More information about SPDX can be found [here](http://spdx.org/about-spdx/what-is-spdx).
