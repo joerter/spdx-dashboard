@@ -24,11 +24,26 @@ View current stable version [here](http://joerter.github.io/spdx-dashboard/ "SPD
 
 ###License
 
-The Apache 2 License has been chosen with regards to the SPDX Dashboard code. The full license can be downloaded [here](../LICENSE).
+The Apache 2 License has been chosen with regards to the SPDX Dashboard code. The full license can be downloaded [here](http://joerter.github.io/spdx-dashboard/LICENSE).
 
-The Creative Commons has been selected for all documentation. The full license can be downloaded [here]
+The Creative Commons has been selected for all documentation. The full license can be viewed [here](http://creativecommons.org/licenses/by/4.0/legalcode).
 
 ###Copyright
+Copyright (c) 2014 John Oerter, Ajay Medury, Seth Hanson
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 ###Technical Specifications
 
@@ -100,8 +115,13 @@ The image below is the data flow diagram of the SPDX Dashboard
 
 ###Communities of Interest
 
+SPDX
+Texas Instruments
+
 ###Communication
 
 This will primarily be handeled by email lists such as SPDX-tech and SPDX-legal. Moreover, voip tools such as Skype may be used in the occasion that a virtual meeting is required.
 
 ###Code Management
+
+All code sent to the SPDX Dashboard group will be managed through Pull Requests (https://help.github.com/articles/using-pull-requests) in GitHub.  Following the pull request, the submitted code will be reviewed by all members of the Dashboard team. If the submitted code is accepted, the Dashboard team will pull the code and add it to the SPDX Dashboard repository. Following, the party that submitted the pull request will receive notification that their submission has been accepted.
