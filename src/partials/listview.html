@@ -1,19 +1,19 @@
 <h1 class="bold">Docs</h1>
 <div class="input-group searchbar">
 	<span class="input-group-addon">Search</span>
-	<input type="text" class="form-control" placeholder="Document Name">
+	<input type="text" class="form-control" placeholder="Document Name" ng-model="searchText">
 </div>
 <table class="table table-bordered table-spdx">
 	<tbody>
-	<tr ng-repeat="doc in docs">
+	<tr ng-repeat="doc in docs | filter:searchText">
 		<td class="td-timestamp">
 			<p class="graybox">
 			<span class="glyphicon glyphicon-time"></span>
-            {{doc.created_at}}
+            {{doc.created_at | date:'medium'}}
 			</p> 
 		</td>
 		<td class="td-main">
-			<a href="#">{{doc.package_file_name}}</a>
+            <a href="#">{{doc.package_file_name}}</a>
 		</td>
 		<td class="td-controls graybox">
 			<div class="btn-toolbar" role="toolbar">
