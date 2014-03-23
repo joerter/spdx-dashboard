@@ -115,7 +115,7 @@ The image below is the data flow diagram of the SPDX Dashboard
 
 ###Communities of Interest
 
-SPDX
+SPDX 
 Texas Instruments
 
 ###Communication
