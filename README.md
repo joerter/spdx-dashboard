@@ -59,7 +59,7 @@ The image below is the data flow diagram of the SPDX Dashboard
 ![Data Flow Diagram](https://github.com/joerter/spdx-dashboard/tree/master/img/dfd.jpg)
 
 ###Installation
-Please install from [Source](https://github.com/joerter/spdx-dashboard/tree/master/src/)
+Please install from [src](https://github.com/joerter/spdx-dashboard/tree/master/src/)
 ###Usage
 
 ####Editing
