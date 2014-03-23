@@ -1,105 +1,107 @@
 <table class="table table-bordered table-striped table-doc">
-				<thead>
-								<tr>
-												<th colspan=2>{{filename}}
-																<span class="glyphicon glyphicon-pencil"></span>
-												</th>
-								</tr>
-				</thead>
-				<tbody>
-				<tr>
-								<td>SPDX Version</td>
-								<td>SPDX-1.1</td>
-				</tr>
-				<tr>
-								<td>Data License</td>
-								<td>CC0-1.0</td>
-				</tr>
-				<tr>
-								<td>Document Comment</td>
-								<td>New comment</td>
-				</tr>
-				</tbody>
-				<thead>
-								<tr>
-												<th colspan=2>Creation Information</th>
-								</tr>
-				</thead>
-				<tbody>
-				<tr>
-								<td>Creator</td>
-								<td>John Oerter</td>
-				</tr>
-				<tr>
-								<td>Created</td>
-								<td>2014-03-03T02:06:38Z</td>
-				</tr>
-				<tr>
-								<td>Updated</td>
-								<td>2014-03-05T02:06:38Z</td>
-				</tr>
-				<tr>
-								<td>Creator Comment</td>
-								<td>New Comment</td>
-				</tr>
-				</tbody>
-				<thead>
-								<tr>
-												<th colspan=2>Package Information</th>
-								</tr>
-				</thead>
-				<tbody>
-				<tr>
-								<td>Package Name</td>
-								<td>Busy Box</td>
-				</tr>
-				<tr>
-								<td>Package Version</td>
-								<td>v1.0</td>
-				</tr>
-				<tr>
-								<td>Package Download Location</td>
-								<td>NONE</td>
-				</tr>
-				<tr>
-								<td>Package Summary</td>
-								<td>This is a sample package view</td>
-				</tr>
-				<tr>
-								<td>Package File Name</td>
-								<td>busybox.zip</td>
-				</tr>
-				<tr>
-								<td>Package Supplier</td>
-								<td>NO ASSERTION</td>
-				</tr>
-				<tr>
-								<td>Package Originator</td>
-								<td>NO ASSERTION</td>
-				</tr>
-				<tr>
-								<td>Package Checksum</td>
-								<td>SHA1 f7c3b202f8243c9ace6ca7438deddda4264c0e2d</td>
-				</tr>
-				<tr>
-								<td>Package Verification Code</td>
-								<td>da39a3ee5e6b4b0d3255bfef95601890afd80709</td>
-				</tr>
-				<tr>
-								<td>Package Description</td>
-								<td>This is a description</td>
-				</tr>
-				<tr>
-								<td>Package Copyright Text</td>
-								<td>This is a copyright text</td>
-				</tr>
-				<tr>
-								<td>License Delcared</td>
-								<td>MIT</td>
-				</tr>
-				<tr>
-								<td>Package License Concluded</td>
-								<td>NO ASSERTION<td>
-												</tr>
-												</tbody>
-								</table>
+    <thead>
+        <tr>
+            <th colspan=2>{{doc.package_file_name}}
+                <span ng-click="editing = !editing" class="glyphicon glyphicon-pencil pointer pull-right"></span>
+                <span ng-click="editing = !editing" class="glyphicon glyphicon-floppy-disk pointer pull-right"></span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Version</td>
+        <td>{{doc.spdx_version}}</td>
+    </tr>
+    <tr>
+        <td>Data License</td>
+        <td>{{doc.data_license}}</td>
+    </tr>
+    <tr>
+        <td>Document Comment</td>
+        <td ng-if="editing"><textarea class='form-control'>{{doc.document_comment}}</textarea>
+        <td ng-if="!editing">{{doc.document_comment}}</td>
+    </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th colspan=2>Creation Information</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Creator</td>
+        <td>{{doc.creator}}</td>
+    </tr>
+    <tr>
+        <td>Created</td>
+        <td>{{doc.created_at}}</td>
+    </tr>
+    <tr>
+        <td>Updated</td>
+        <td>{{doc.updated_at}}</td>
+    </tr>
+    <tr>
+        <td>Creator Comment</td>
+        <td>{{doc.creator_comments}}</td>
+    </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th colspan=2>Package Information</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Package Name</td>
+        <td>{{doc.package_name}}</td>
+    </tr>
+    <tr>
+        <td>Package Version</td>
+        <td>{{doc.package_version}}</td>
+    </tr>
+    <tr>
+        <td>Package Download Location</td>
+        <td>{{doc.package_download_location}}</td>
+    </tr>
+    <tr>
+        <td>Package Summary</td>
+        <td>{{doc.package_summary}}</td>
+    </tr>
+    <tr>
+        <td>Package File Name</td>
+        <td>{{doc.package_file_name}}</td>
+    </tr>
+    <tr>
+        <td>Package Supplier</td>
+        <td>{{doc.package_supplier}}</td>
+    </tr>
+    <tr>
+        <td>Package Originator</td>
+        <td>{{doc.package_originator}}</td>
+    </tr>
+    <tr>
+        <td>Package Checksum</td>
+        <td>{{doc.package_checksum}}</td>
+    </tr>
+    <tr>
+        <td>Package Verification Code</td>
+        <td>{{doc.package_verification_code}}</td>
+    </tr>
+    <tr>
+        <td>Package Description</td>
+        <td>{{doc.package_description}}</td>
+    </tr>
+    <tr>
+        <td>Package Copyright Text</td>
+        <td>{{doc.package_copyright_text}}</td>
+    </tr>
+    <tr>
+        <td>License Delcared</td>
+        <td>{{doc.package_license_declared}}</td>
+    </tr>
+    <tr>
+        <td>Package License Concluded</td>
+        <td>{{doc.package_license_concluded}}<td>
+            </tr>
+            </tbody>
+        </table>

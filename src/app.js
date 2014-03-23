@@ -9,7 +9,7 @@ dashApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function
             controller: 'listCtrl',
             templateUrl: 'partials/listview.html'
         })
-        .when('/doc', {
+        .when('/doc/:id', {
             controller: 'docCtrl',
             templateUrl: 'partials/docview.html'
         })
@@ -20,28 +20,63 @@ dashApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
 
+// factory for helper functions
+dashApp.factory('helpers', function() {
+    var factory = {};
+
+    factory.findByID = function (array, id) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i].id == id) {
+                return array[i];
+            }
+        }
+        return null;
+    }
+
+    return factory; 
+}); 
+
 // spdxDoc factory for managing getting spdx docs from the server
-dashApp.factory('spdxDoc', ['$resource', function($resource) {
-    return $resource('spdxdev.ist.unomaha.edu:3000/api/spdx', {}, {
-        query: {method:'GET', isArray:true}
+dashApp.factory('spdxDoc', ['$resource', 'helpers', function($resource, helpers) {
+    // define the resource object. we can use this to do queries http://spdxdev.ist.unomaha.edu:3000/api/spdx
+    var resource = $resource('spdx.json', {}, {
+        getAllDocs: {method:'GET', isArray:true}
     });
+
+    var factory = {};
+    var docs = [];
+
+    factory.getDocs = function () {
+        if (docs.length === 0) {
+            docs = resource.getAllDocs();
+        }
+        return docs;
+    }
+
+    factory.getDocByID = function (docid) {
+        return helpers.findByID(this.getDocs(), docid);
+    }
+
+    return factory;
 }]);
 
 //***************************************************************************
-//Controllers
+// Controllers
 //
-//listCtrl - Controller for dashboard home, gets a list of all SPDX Docs and
+// listCtrl - Controller for dashboard home, gets a list of all SPDX Docs and
 //           displays it
-//docCtrl - Controller for the single doc view, displays a SPDX doc in html
+// docCtrl - Controller for the single doc view, displays a SPDX doc in html
 //          format
 //***************************************************************************
 
 // listCtrl
 dashApp.controller('listCtrl', ['$scope','spdxDoc', function($scope, spdxDoc) {
-   $scope.docs = spdxDoc.query(); 
+    $scope.docs = spdxDoc.getDocs(); 
 }]);
 
 // docCtrl
-dashApp.controller('docCtrl', ['$scope', function($scope) {	
+dashApp.controller('docCtrl', ['$scope', '$routeParams', 'spdxDoc', function($scope, $routeParams, spdxDoc) {	
+    $scope.editing = false;
+    $scope.doc = spdxDoc.getDocByID($routeParams.id);
 }]);
 
