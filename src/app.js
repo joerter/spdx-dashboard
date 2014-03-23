@@ -39,7 +39,7 @@ dashApp.factory('helpers', function() {
 // spdxDoc factory for managing getting spdx docs from the server
 dashApp.factory('spdxDoc', ['$resource', 'helpers', function($resource, helpers) {
     // define the resource object. we can use this to do queries http://spdxdev.ist.unomaha.edu:3000/api/spdx
-    var resource = $resource('spdx.json', {}, {
+    var resource = $resource('http://spdxdev.ist.unomaha.edu:3000/api/spdx', {}, {
         getAllDocs: {method:'GET', isArray:true}
     });
 

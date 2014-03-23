@@ -2,8 +2,8 @@
     <thead>
         <tr>
             <th colspan=2>{{doc.package_file_name}}
-                <span ng-click="editing = !editing" class="glyphicon glyphicon-pencil pointer pull-right"></span>
-                <span ng-click="editing = !editing" class="glyphicon glyphicon-floppy-disk pointer pull-right"></span>
+                <span ng-show="!editing" ng-click="editing = !editing" class="glyphicon glyphicon-edit pointer pull-right"></span>
+                <span ng-show="editing" ng-click="editing = !editing" class="glyphicon glyphicon-floppy-disk pointer pull-right"></span>
             </th>
         </tr>
     </thead>
@@ -18,8 +18,8 @@
     </tr>
     <tr>
         <td>Document Comment</td>
-        <td ng-if="editing"><textarea class='form-control'>{{doc.document_comment}}</textarea>
-        <td ng-if="!editing">{{doc.document_comment}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.document_comment" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.document_comment}}</td>
     </tr>
     </tbody>
     <thead>
@@ -96,12 +96,14 @@
         <td>{{doc.package_copyright_text}}</td>
     </tr>
     <tr>
-        <td>License Delcared</td>
+        <td>License Declared</td>
         <td>{{doc.package_license_declared}}</td>
     </tr>
     <tr>
         <td>Package License Concluded</td>
-        <td>{{doc.package_license_concluded}}<td>
-            </tr>
-            </tbody>
-        </table>
+        <td ng-show="!editing">{{doc.package_license_concluded}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_license_concluded" class='form-control'></textarea></td>
+    </tr>
+</tbody>
+</table>
+<button ng-show="editing" type="button" class="btn btn-primary">Save</button>
