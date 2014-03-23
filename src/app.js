@@ -40,7 +40,8 @@ dashApp.factory('helpers', function() {
 dashApp.factory('SPDXDoc', ['$resource', 'helpers', function($resource, helpers) {
     // define the resource object. we can use this to do queries 
     return $resource('http://spdxdev.ist.unomaha.edu:3000/api/spdx/:docId', {docId: '@id'}, {
-        getDoc: {method:'GET', isArray:true}
+        getDoc: {method:'GET', isArray:true},
+        update: {method:'PUT'}
     });
 }]);
 
