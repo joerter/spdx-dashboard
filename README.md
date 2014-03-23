@@ -59,7 +59,7 @@ The image below is the data flow diagram of the SPDX Dashboard
 ![Data Flow Diagram](https://github.com/joerter/spdx-dashboard/tree/master/img/dfd.jpg)
 
 ###Installation
-
+Please install from [Source](https://github.com/joerter/spdx-dashboard/tree/master/src/)
 ###Usage
 
 ####Editing
@@ -115,8 +115,8 @@ The image below is the data flow diagram of the SPDX Dashboard
 
 ###Communities of Interest
 
-SPDX 
-Texas Instruments
+1. SPDX 
+2. Texas Instruments
 
 ###Communication
 
