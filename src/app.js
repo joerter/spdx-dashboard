@@ -37,27 +37,11 @@ dashApp.factory('helpers', function() {
 }); 
 
 // spdxDoc factory for managing getting spdx docs from the server
-dashApp.factory('spdxDoc', ['$resource', 'helpers', function($resource, helpers) {
-    // define the resource object. we can use this to do queries http://spdxdev.ist.unomaha.edu:3000/api/spdx
-    var resource = $resource('http://spdxdev.ist.unomaha.edu:3000/api/spdx', {}, {
-        getAllDocs: {method:'GET', isArray:true}
+dashApp.factory('SPDXDoc', ['$resource', 'helpers', function($resource, helpers) {
+    // define the resource object. we can use this to do queries 
+    return $resource('http://spdxdev.ist.unomaha.edu:3000/api/spdx/:docId', {docId: '@id'}, {
+        getDoc: {method:'GET', isArray:true}
     });
-
-    var factory = {};
-    var docs = [];
-
-    factory.getDocs = function () {
-        if (docs.length === 0) {
-            docs = resource.getAllDocs();
-        }
-        return docs;
-    }
-
-    factory.getDocByID = function (docid) {
-        return helpers.findByID(this.getDocs(), docid);
-    }
-
-    return factory;
 }]);
 
 //***************************************************************************
@@ -70,13 +54,13 @@ dashApp.factory('spdxDoc', ['$resource', 'helpers', function($resource, helpers)
 //***************************************************************************
 
 // listCtrl
-dashApp.controller('listCtrl', ['$scope','spdxDoc', function($scope, spdxDoc) {
-    $scope.docs = spdxDoc.getDocs(); 
+dashApp.controller('listCtrl', ['$scope','SPDXDoc', function($scope, SPDXDoc) {
+    $scope.docs = SPDXDoc.query(); 
 }]);
 
 // docCtrl
-dashApp.controller('docCtrl', ['$scope', '$routeParams', 'spdxDoc', function($scope, $routeParams, spdxDoc) {	
+dashApp.controller('docCtrl', ['$scope', '$routeParams', 'SPDXDoc', function($scope, $routeParams, SPDXDoc) {	
     $scope.editing = false;
-    $scope.doc = spdxDoc.getDocByID($routeParams.id);
+    $scope.doc = SPDXDoc.getDoc({id: $routeParams.id});
 }]);
 
