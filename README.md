@@ -20,7 +20,7 @@ The following list describes the main functionality of the completed SPDX Dashbo
 
 ###Version
 
-View current stable version [here](http://joerter.github.io/spdx-dashboard/ "SPDX Dashboard")
+View current stable version [here](http://spdxdev.ist.unomaha.edu/spdx-dashboard/ "SPDX Dashboard")
 
 ###License
 
@@ -56,7 +56,7 @@ The following is a minimal requirement for the dev environment:
  
 ###System Design
 The image below is the data flow diagram of the SPDX Dashboard 
-![Data Flow Diagram](dfd.jpg "Data Flow Diagram")
+![Data Flow Diagram](http://www.google.com "Data Flow Diagram")
 
 ###Installation
 
@@ -107,7 +107,7 @@ The image below is the data flow diagram of the SPDX Dashboard
 9. Notes: See the mockup section for a screen shot of this use case.
 
 ####Mockups
-![List View](listview.png)
+![List View](http://github.com/joerter/spdx-dashboard/img/listview.png)
 ![Document View](docview.png)
 ![Edit 1](edit1.png)
 ![Edit 2](edit2.png)
