@@ -56,7 +56,7 @@ The following is a minimal requirement for the dev environment:
  
 ###System Design
 The image below is the data flow diagram of the SPDX Dashboard 
-![Data Flow Diagram](http://www.google.com "Data Flow Diagram")
+![Data Flow Diagram](https://github.com/joerter/spdx-dashboard/tree/master/img/dfd.jpg)
 
 ###Installation
 
@@ -107,11 +107,11 @@ The image below is the data flow diagram of the SPDX Dashboard
 9. Notes: See the mockup section for a screen shot of this use case.
 
 ####Mockups
-![List View](http://github.com/joerter/spdx-dashboard/img/listview.png)
-![Document View](docview.png)
-![Edit 1](edit1.png)
-![Edit 2](edit2.png)
-![Updated](updatedview.png)
+![List View](https://github.com/joerter/spdx-dashboard/tree/master/img/listview.png)
+![Document View](https://github.com/joerter/spdx-dashboard/tree/master/img/docview.png)
+![Edit 1](https://github.com/joerter/spdx-dashboard/tree/master/imgedit1.png)
+![Edit 2](https://github.com/joerter/spdx-dashboard/tree/master/imgedit2.png)
+![Updated](https://github.com/joerter/spdx-dashboard/tree/master/imgupdatedview.png)
 
 ###Communities of Interest
 
@@ -124,4 +124,4 @@ This will primarily be handeled by email lists such as SPDX-tech and SPDX-legal.
 
 ###Code Management
 
-All code sent to the SPDX Dashboard group will be managed through Pull Requests (https://help.github.com/articles/using-pull-requests) in GitHub.  Following the pull request, the submitted code will be reviewed by all members of the Dashboard team. If the submitted code is accepted, the Dashboard team will pull the code and add it to the SPDX Dashboard repository. Following, the party that submitted the pull request will receive notification that their submission has been accepted.
+All code sent to the SPDX Dashboard group will be managed through [Pull Requests](https://help.github.com/articles/using-pull-requests) in GitHub.  Following the pull request, the submitted code will be reviewed by all members of the Dashboard team. If the submitted code is accepted, the Dashboard team will pull the code and add it to the SPDX Dashboard repository. Following, the party that submitted the pull request will receive notification that their submission has been accepted.
