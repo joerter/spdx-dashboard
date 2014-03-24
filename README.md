@@ -20,11 +20,11 @@ The following list describes the main functionality of the completed SPDX Dashbo
 
 ###Version
 
-View current stable version [here](http://joerter.github.io/spdx-dashboard/ "SPDX Dashboard")
+View current stable version [here](http://spdxdev.ist.unomaha.edu/spdx-dashboard/ "SPDX Dashboard")
 
 ###License
 
-The Apache 2 License has been chosen with regards to the SPDX Dashboard code. The full license can be downloaded [here](http://joerter.github.io/spdx-dashboard/LICENSE).
+The Apache 2 License has been chosen with regards to the SPDX Dashboard code. The full license can be downloaded [here](LICENSE).
 
 The Creative Commons has been selected for all documentation. The full license can be viewed [here](http://creativecommons.org/licenses/by/4.0/legalcode).
 
@@ -56,10 +56,10 @@ The following is a minimal requirement for the dev environment:
  
 ###System Design
 The image below is the data flow diagram of the SPDX Dashboard 
-![Data Flow Diagram](dfd.jpg "Data Flow Diagram")
+![Data Flow Diagram](img/dfd.jpg)
 
 ###Installation
-
+Please install from [src](src/)
 ###Usage
 
 ####Editing
@@ -107,16 +107,16 @@ The image below is the data flow diagram of the SPDX Dashboard
 9. Notes: See the mockup section for a screen shot of this use case.
 
 ####Mockups
-![List View](listview.png)
-![Document View](docview.png)
-![Edit 1](edit1.png)
-![Edit 2](edit2.png)
-![Updated](updatedview.png)
+![List View](img/listview.png)
+![Document View](img/docview.png)
+![Edit 1](img/edit1.png)
+![Edit 2](img/edit2.png)
+![Updated](img/updatedview.png)
 
 ###Communities of Interest
 
-SPDX
-Texas Instruments
+1. SPDX 
+2. Texas Instruments
 
 ###Communication
 
@@ -124,4 +124,4 @@ This will primarily be handeled by email lists such as SPDX-tech and SPDX-legal.
 
 ###Code Management
 
-All code sent to the SPDX Dashboard group will be managed through Pull Requests (https://help.github.com/articles/using-pull-requests) in GitHub.  Following the pull request, the submitted code will be reviewed by all members of the Dashboard team. If the submitted code is accepted, the Dashboard team will pull the code and add it to the SPDX Dashboard repository. Following, the party that submitted the pull request will receive notification that their submission has been accepted.
+All code sent to the SPDX Dashboard group will be managed through [Pull Requests](https://help.github.com/articles/using-pull-requests) in GitHub.  Following the pull request, the submitted code will be reviewed by all members of the Dashboard team. If the submitted code is accepted, the Dashboard team will pull the code and add it to the SPDX Dashboard repository. Following, the party that submitted the pull request will receive notification that their submission has been accepted.
