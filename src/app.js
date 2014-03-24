@@ -1,5 +1,5 @@
 // create angular module for dashApp
-var dashApp = angular.module('dashApp', ['ngRoute', 'ngResource']);
+var dashApp = angular.module('dashApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
 
 // manage routing and controllers
 dashApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
@@ -60,8 +60,22 @@ dashApp.controller('listCtrl', ['$scope','SPDXDoc', function($scope, SPDXDoc) {
 }]);
 
 // docCtrl
-dashApp.controller('docCtrl', ['$scope', '$routeParams', 'SPDXDoc', function($scope, $routeParams, SPDXDoc) {	
+dashApp.controller('docCtrl', ['$scope', '$routeParams', '$modal', 'SPDXDoc', function($scope, $routeParams, $modal, SPDXDoc) {	
     $scope.editing = false;
-    $scope.doc = SPDXDoc.getDoc({id: $routeParams.id});
+    SPDXDoc.get({docId: $routeParams.id}, function(spdx) {
+        $scope.doc = spdx;
+    });
+
+    // open the modal
+    $scope.open = function () {
+        /*var saveModal = $modal.open({
+            templateUrl: 'partials/saveModal.html'
+        });*/
+        $scope.doc.id = $routeParams.id;
+        SPDXDoc.update({
+            document_comment: $scope.doc.document_comment,
+            licenseconcluded: $scope.doc.package_license_concluded
+        }, $scope.doc);
+    }
 }]);
 
