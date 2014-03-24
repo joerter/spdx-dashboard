@@ -24,7 +24,7 @@ View current stable version [here](http://spdxdev.ist.unomaha.edu/spdx-dashboard
 
 ###License
 
-The Apache 2 License has been chosen with regards to the SPDX Dashboard code. The full license can be downloaded [here](http://joerter.github.io/spdx-dashboard/LICENSE).
+The Apache 2 License has been chosen with regards to the SPDX Dashboard code. The full license can be downloaded [here](LICENSE).
 
 The Creative Commons has been selected for all documentation. The full license can be viewed [here](http://creativecommons.org/licenses/by/4.0/legalcode).
 
