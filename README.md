@@ -56,10 +56,10 @@ The following is a minimal requirement for the dev environment:
  
 ###System Design
 The image below is the data flow diagram of the SPDX Dashboard 
-![Data Flow Diagram](https://github.com/joerter/spdx-dashboard/tree/master/img/dfd.jpg)
+![Data Flow Diagram](img/dfd.jpg)
 
 ###Installation
-Please install from [src](https://github.com/joerter/spdx-dashboard/tree/master/src/)
+Please install from [src](src/)
 ###Usage
 
 ####Editing
@@ -107,11 +107,11 @@ Please install from [src](https://github.com/joerter/spdx-dashboard/tree/master/
 9. Notes: See the mockup section for a screen shot of this use case.
 
 ####Mockups
-![List View](https://github.com/joerter/spdx-dashboard/tree/master/img/listview.png)
-![Document View](https://github.com/joerter/spdx-dashboard/tree/master/img/docview.png)
-![Edit 1](https://github.com/joerter/spdx-dashboard/tree/master/imgedit1.png)
-![Edit 2](https://github.com/joerter/spdx-dashboard/tree/master/imgedit2.png)
-![Updated](https://github.com/joerter/spdx-dashboard/tree/master/imgupdatedview.png)
+![List View](img/listview.png)
+![Document View](img/docview.png)
+![Edit 1](img/edit1.png)
+![Edit 2](img/edit2.png)
+![Updated](img/updatedview.png)
 
 ###Communities of Interest
 
