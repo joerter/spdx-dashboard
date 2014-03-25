@@ -52,3 +52,8 @@ table.table-spdx td.td-controls {
 table.table-doc th {
   font-size: 2em;
 }
+
+/* SAVING MODAL */
+.modalemail {
+    margin-bottom: 20px;
+}

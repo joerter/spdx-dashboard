@@ -39,7 +39,7 @@ dashApp.factory('helpers', function() {
 // spdxDoc factory for managing getting spdx docs from the server
 dashApp.factory('SPDXDoc', ['$resource', 'helpers', function($resource, helpers) {
     // define the resource object. we can use this to do queries 
-    return $resource('http://spdxdev.ist.unomaha.edu:3000/api/spdx/:docId', {docId: '@id'}, {
+    return $resource('http://localhost:3000/api/spdx/:docId', {docId: '@id'}, {
         getDoc: {method:'GET', isArray:true},
         update: {method:'PUT'}
     });
@@ -64,18 +64,61 @@ dashApp.controller('docCtrl', ['$scope', '$routeParams', '$modal', 'SPDXDoc', fu
     $scope.editing = false;
     SPDXDoc.get({docId: $routeParams.id}, function(spdx) {
         $scope.doc = spdx;
+        // save copies of doc comments and license concluded to check later
+        $scope.doccomment = $scope.doc.document_comment;
+        $scope.licenseconcluded = $scope.doc.package_license_concluded;
     });
 
     // open the modal
     $scope.open = function () {
-        /*var saveModal = $modal.open({
-            templateUrl: 'partials/saveModal.html'
-        });*/
-        $scope.doc.id = $routeParams.id;
-        SPDXDoc.update({
-            document_comment: $scope.doc.document_comment,
-            licenseconcluded: $scope.doc.package_license_concluded
-        }, $scope.doc);
+        var saveModal = $modal.open({
+            templateUrl: 'partials/saveModal.html',
+            controller: 'saveModalCtrl',
+            resolve: {
+                changes: function () {
+                    var changesArray = [];
+                    if ($scope.doccomment != $scope.doc.document_comment) {
+                        var change = {field: 'Document Comment', original: $scope.doccomment, change: $scope.doc.document_comment}; 
+                        changesArray.push(change);
+                    }
+                    if ($scope.licenseconcluded != $scope.doc.package_license_concluded) {
+                        var change = {field: 'Package License Concluded', original: $scope.licenseconcluded, change: $scope.doc.package_license_concluded}; 
+                        changesArray.push(change);
+                    }
+                    return changesArray;
+                }
+            }
+        });
+
+        saveModal.result.then(function () {
+            $scope.doc.id = $routeParams.id;
+            SPDXDoc.update({
+                document_comment: $scope.doc.document_comment,
+                licenseconcluded: $scope.doc.package_license_concluded,
+                package_id: $scope.doc.package_id
+            }, $scope.doc);
+        });
     }
+    
+}]);
+
+dashApp.controller('saveModalCtrl', ['$scope', '$modalInstance', 'changes', function($scope, $modalInstance, changes) {
+    $scope.changes = changes;
+    if ($scope.changes.length === 0) {
+        $scope.message = "No changes were made";
+        $scope.nochanges = true;
+    }
+    else {
+        $scope.message = "You've made some changes!";
+    }
+
+
+    $scope.save = function () {
+        $modalInstance.close();
+    };
+
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
 }]);
 

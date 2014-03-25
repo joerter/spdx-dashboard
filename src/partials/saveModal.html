@@ -1,3 +1,26 @@
 <div class="modal-header">
-    <h3>I'm a modal!</h3>
+    <h3>{{message}}</h3>
+
+    <table class="table table-bordered table-striped" ng-hide="nochanges">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Original</th>
+                <th>Your Changes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="change in changes">
+                <td>{{change.field}}</td>
+                <td>{{change.original}}</td>
+                <td>{{change.change}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div ng-hide="nochanges">
+        <h4>To save, enter your email below and click save</h4>
+        <input type="email" class="form-control modalemail" placeholder="Enter email">
+        <button class="btn btn-success" ng-click="save()">Save</button>
+        <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+    </div>
 </div>

@@ -3,7 +3,7 @@
         <tr>
             <th colspan=2>{{doc.package_file_name}}
                 <span ng-show="!editing" ng-click="editing = !editing" class="glyphicon glyphicon-edit pointer pull-right"></span>
-                <span ng-show="editing" ng-click="editing = !editing" class="glyphicon glyphicon-floppy-disk pointer pull-right"></span>
+                <span ng-show="editing" ng-click="open(); editing = !editing" class="glyphicon glyphicon-floppy-disk pointer pull-right"></span>
             </th>
         </tr>
     </thead>
@@ -106,4 +106,4 @@
     </tr>
 </tbody>
 </table>
-<button ng-show="editing" ng-click="open()" type="button" class="btn btn-primary">Save</button>
+<button ng-show="editing" ng-click="open(); editing = !editing" type="button" class="btn btn-primary">Save</button>
