@@ -1,6 +1,8 @@
 spdx-dashboard
 ==============
 
+Looking for the SPDX API? It's now located [here](https://github.com/joerter/Database).
+
 ###Overview
 
 The SPDX standard assists organizations in tracking compliance with open source software licenses through the standardization of the method in which license information is shared. An SPDX document communicates the components, licenses, and copyrights associated with a particular software package. More information about SPDX can be found [here](http://spdx.org/about-spdx/what-is-spdx).
@@ -21,6 +23,16 @@ The following list describes the main functionality of the completed SPDX Dashbo
 ###Version
 
 View current stable version [here](http://spdxdev.ist.unomaha.edu/spdx-dashboard/ "SPDX Dashboard")
+
+Features currently implemented in v1.0  
+* Listing of SPDX documents in database repository with search based filtering
+* View details of SPDX Doc
+* Update Document Comment and Package License Concluded fields
+
+Features not currently implemented, but planned for v1.1 and beyond
+* More advanced searching and pagination of SPDX docs contained in the database
+* Verification of SPDX doc editors based on email
+* Trackable history of updates made to SPDX documents
 
 ###License
 
@@ -59,6 +71,7 @@ The image below is the data flow diagram of the SPDX Dashboard
 ![Data Flow Diagram](img/dfd.jpg)
 
 ###Installation
+The spdx-dashboard is a web application, and does not require installation on the client machine. However, the code can be downloaded here and developed locally.  
 Please install from [src](src/)
 ###Usage
 
@@ -111,6 +124,7 @@ Please install from [src](src/)
 ![Document View](img/docview.png)
 ![Edit 1](img/edit1.png)
 ![Edit 2](img/edit2.png)
+![Save](img/savechanges.png)
 ![Updated](img/updatedview.png)
 
 ###Communities of Interest
