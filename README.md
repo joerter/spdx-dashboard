@@ -22,8 +22,6 @@ The following list describes the main functionality of the completed SPDX Dashbo
 
 ###Version
 
-View current stable version [here](http://spdxdev.ist.unomaha.edu/spdx-dashboard/ "SPDX Dashboard")
-
 Features currently implemented in v1.0  
 * Listing of SPDX documents in database repository with search based filtering
 * View details of SPDX Doc
