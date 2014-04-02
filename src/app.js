@@ -39,7 +39,8 @@ dashApp.factory('helpers', function() {
 // spdxDoc factory for managing getting spdx docs from the server
 dashApp.factory('SPDXDoc', ['$resource', 'helpers', function($resource, helpers) {
     // define the resource object. we can use this to do queries 
-    return $resource('http://localhost:3000/api/spdx/:docId', {docId: '@id'}, {
+    var serverRoot = "http://localhost:3000";
+    return $resource(serverRoot + '/api/spdx/:docId', {docId: '@id'}, {
         getDoc: {method:'GET', isArray:true},
         update: {method:'PUT'}
     });
