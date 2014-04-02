@@ -76,7 +76,7 @@ The SPDX Dashboard assumes that the api is running on http://localhost:3000, but
 ####Deploying the site
 The dashboard can be depolyed on your server in any way you choose. If using Apache, simply place the contents of the [src](https://github.com/joerter/spdx-dashboard/blob/master/src/) directory in your document root.
 
-The [web-server.js](https://github.com/joerter/spdx-dashboard/blob/master/src/web-server.js) can be used with node to host the dashboard on localhost:8080. Run with the following:
+If you don't have any web server software set up, the [web-server.js](https://github.com/joerter/spdx-dashboard/blob/master/src/web-server.js) can be used with node.js to host the dashboard on localhost:8080. Run with the following:
 
 `node web-server.js`
 ###Usage
