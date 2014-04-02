@@ -69,8 +69,16 @@ The image below is the data flow diagram of the SPDX Dashboard
 ![Data Flow Diagram](img/dfd.jpg)
 
 ###Installation
-The spdx-dashboard is a web application, and does not require installation on the client machine. However, the code can be downloaded here and developed locally.  
-Please install from [src](src/)
+####Prereq
+A running instance of the [SPDX API](https://github.com/joerter/Database/tree/master/api).  
+The SPDX Dashboard assumes that the api is running on http://localhost:3000, but this can be changed to your server address in the [app.js](https://github.com/joerter/spdx-dashboard/blob/master/src/app.js) file. 
+
+####Deploying the site
+The dashboard can be depolyed on your server in any way you choose. If using Apache, simply place the contents of the [src](https://github.com/joerter/spdx-dashboard/blob/master/src/) directory in your document root.
+
+The [web-server.js](https://github.com/joerter/spdx-dashboard/blob/master/src/web-server.js) can be used with node to host the dashboard on localhost:8080. Run with the following:
+
+`node web-server.js`
 ###Usage
 
 ####Editing
