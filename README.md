@@ -1,7 +1,7 @@
 spdx-dashboard
 ==============
 
-Looking for the SPDX API? It's now located [here](https://github.com/joerter/Database).
+Looking for the SPDX API? It's now located [here](https://github.com/joerter/Database/tree/master/api).
 
 ###Overview
 
