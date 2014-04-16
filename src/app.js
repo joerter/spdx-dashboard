@@ -41,7 +41,6 @@ dashApp.factory('SPDXDoc', ['$resource', 'helpers', function($resource, helpers)
     // define the resource object. we can use this to do queries 
     var serverRoot = "http://localhost:3000";
     return $resource(serverRoot + '/api/spdx/:docId', {docId: '@id'}, {
-        getDoc: {method:'GET', isArray:true},
         update: {method:'PUT'}
     });
 }]);
@@ -79,12 +78,18 @@ dashApp.controller('docCtrl', ['$scope', '$routeParams', '$modal', 'SPDXDoc', fu
                 changes: function () {
                     var changesArray = [];
                     if ($scope.doccomment != $scope.doc.document_comment) {
-                        var change = {field: 'Document Comment', original: $scope.doccomment, change: $scope.doc.document_comment}; 
-                        changesArray.push(change);
+                        changesArray.push({
+                            field: 'Document Comment', 
+                            original: $scope.doccomment, 
+                            change: $scope.doc.document_comment
+                        });
                     }
                     if ($scope.licenseconcluded != $scope.doc.package_license_concluded) {
-                        var change = {field: 'Package License Concluded', original: $scope.licenseconcluded, change: $scope.doc.package_license_concluded}; 
-                        changesArray.push(change);
+                         changesArray.push({
+                            field: 'Package License Concluded', 
+                            original: $scope.licenseconcluded, 
+                            change: $scope.doc.package_license_concluded
+                         });
                     }
                     return changesArray;
                 }
