@@ -140,7 +140,7 @@ If you don't have any web server software set up, the [web-server.js](https://gi
 
 ###Communication
 
-This will primarily be handeled by email lists such as SPDX-tech (spdx-tech@lists.spdx.org) and SPDX-legal (spdx-legal@lists.spdx.org). Moreover, voip tools such as Skype may be used in the occasion that a virtual meeting is required.
+This will primarily be handeled by email lists such as SPDX-tech (spdx-tech@lists.spdx.org) and SPDX-legal (spdx-legal@lists.spdx.org).
 
 ###Code Management
 
