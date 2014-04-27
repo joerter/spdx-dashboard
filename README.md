@@ -63,6 +63,7 @@ The following is a minimal requirement for the dev environment:
 * MySQL
 * Chrome/Firefox dev tools for debugging values sent between the client and server.
 * Postman for API testing
+* Hardware: 512MB RAM, 5GB HDD on server
  
 ###System Design
 The image below is the data flow diagram of the SPDX Dashboard 
