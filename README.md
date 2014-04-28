@@ -63,6 +63,7 @@ The following is a minimal requirement for the dev environment:
 * MySQL
 * Chrome/Firefox dev tools for debugging values sent between the client and server.
 * Postman for API testing
+* Hardware: 512MB RAM, 5GB HDD on server
  
 ###System Design
 The image below is the data flow diagram of the SPDX Dashboard 
@@ -76,7 +77,7 @@ The SPDX Dashboard assumes that the api is running on http://localhost:3000, but
 ####Deploying the site
 The dashboard can be depolyed on your server in any way you choose. If using Apache, simply place the contents of the [src](https://github.com/joerter/spdx-dashboard/blob/master/src/) directory in your document root.
 
-If you don't have any web server software set up, the [web-server.js](https://github.com/joerter/spdx-dashboard/blob/master/src/web-server.js) can be used with node.js to host the dashboard on localhost:8080. Run with the following:
+If you don't have any web server software set up, the [web-server.js](https://github.com/joerter/spdx-dashboard/blob/master/src/web-server.js) can be used with node.js (requires [express](http://expressjs.com/)) to host the dashboard on localhost:8080. Run with the following:
 
 `node web-server.js`
 ###Usage
@@ -140,7 +141,7 @@ If you don't have any web server software set up, the [web-server.js](https://gi
 
 ###Communication
 
-This will primarily be handeled by email lists such as SPDX-tech and SPDX-legal. Moreover, voip tools such as Skype may be used in the occasion that a virtual meeting is required.
+This will primarily be handeled by email lists such as SPDX-tech (spdx-tech@lists.spdx.org) and SPDX-legal (spdx-legal@lists.spdx.org).
 
 ###Code Management
 
