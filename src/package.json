@@ -1,0 +1,10 @@
+{
+    "name": "test-server",
+    "description": "test-server",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "4.x",
+        "morgan": "~1.0.0"
+    }
+}
