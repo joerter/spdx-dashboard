@@ -3,30 +3,35 @@
 	<span class="input-group-addon">Search</span>
 	<input type="text" class="form-control" placeholder="Document Name" ng-model="searchText">
 </div>
+<div>
+	<button ng-click="open()" type="button" class="btn btn-primary">Upload Files</button>
+</div>
 <table class="table table-bordered table-spdx">
 	<tbody>
-	<tr ng-repeat="doc in docs | filter:searchText">
-		<td class="td-timestamp">
-			<p class="graybox">
-			<span class="glyphicon glyphicon-time"></span>
-            {{doc.created_at | date:'medium'}}
-			</p> 
-		</td>
-		<td class="td-main">
-            <a href="#/doc/{{doc.id}}">{{doc.package_name}}</a>
-		</td>
-		<td class="td-controls graybox">
-			<div class="btn-toolbar" role="toolbar">
-				<div class="btn-group-sm">
-					<button type="button" class="btn btn-default">
-						<span class="glyphicon glyphicon-download"></span>
-						Download
-					</button>
-					<button type="button" class="btn btn-default">
-						<span class="glyphicon glyphicon-transfer"></span>
-						Compare
-					</button>
+		<tr ng-repeat="doc in docs | filter:searchText">
+			<td class="td-timestamp">
+				<p class="graybox">
+				<span class="glyphicon glyphicon-time"> </span>
+	            {{doc.created_at | date:'medium'}}
+				</p> 
+			</td>
+			<td class="td-main">
+	            <a href="#/doc/{{doc.id}}">{{doc.package_name}}</a>
+			</td>
+			<td class="td-controls graybox">
+				<div class="btn-toolbar" role="toolbar">
+					<div class="btn-group-sm">
+						<button type="button" class="btn btn-default">
+							<span class="glyphicon glyphicon-download"> </span>
+							Download
+						</button>
+						<button type="button" class="btn btn-default">
+							<span class="glyphicon glyphicon-transfer"> </span>
+							Compare
+						</button>
+					</div>
 				</div>
-			</div>
-		</td>
-	</tr>
+			</td>
+		</tr>
+	</tbody>
+</table>
