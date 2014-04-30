@@ -1,5 +1,5 @@
 // create angular module for dashApp
-var dashApp = angular.module('dashApp', ['ngRoute', 'ngResource', 'ui.bootstrap']);
+var dashApp = angular.module('dashApp', ['ngRoute', 'ngResource', 'ui.bootstrap', 'angularFileUpload']);
 
 // manage routing and controllers
 dashApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
@@ -31,7 +31,7 @@ dashApp.factory('helpers', function() {
             }
         }
         return null;
-    }
+    };
 
     return factory; 
 }); 
@@ -63,8 +63,16 @@ dashApp.controller('pluginCtrl', ['$scope', '$http', function($scope, $http) {
 //***************************************************************************
 
 // listCtrl
-dashApp.controller('listCtrl', ['$scope','SPDXDoc', function($scope, SPDXDoc) {
-    $scope.docs = SPDXDoc.query(); 
+dashApp.controller('listCtrl', ['$scope', '$modal', 'SPDXDoc', function($scope, $modal, SPDXDoc) {
+    $scope.docs = SPDXDoc.query();
+    
+    // open the modal
+    $scope.open = function () {
+        var uploadModal = $modal.open({
+            templateUrl: 'partials/uploadModal.html',
+            controller: 'uploadModalCtrl'
+        });
+      };
 }]);
 
 // docCtrl
@@ -112,7 +120,7 @@ dashApp.controller('docCtrl', ['$scope', '$routeParams', '$modal', 'SPDXDoc', fu
                 package_id: $scope.doc.package_id
             }, $scope.doc);
         });
-    }
+    };
     
 }]);
 
@@ -136,3 +144,56 @@ dashApp.controller('saveModalCtrl', ['$scope', '$modalInstance', 'changes', func
     };
 }]);
 
+dashApp.controller('uploadModalCtrl', ['$scope', '$upload', '$modalInstance', function($scope, $upload, $modalInstance) {
+	$scope.files = [];
+	$scope.onFileSelect = function($files) {
+		if(angular.isArray($files)){
+			for(var i = 0; i < $files.length; i++){
+				$scope.files.push($files[i]);	
+			}
+		}
+		else{
+			$scope.files.push($files);	
+		}
+		
+	};
+
+    $scope.submitUplaod = function ($index) {
+        	    //$files: an array of files selected, each file has name, size, and type.
+		for (var i = 0; i < $scope.files.length; i++) {
+			if(i == $index){
+				var file = $scope.files[i];
+				$scope.upload = $upload.upload({
+			    	url: 'http://spdxdev.ist.unomaha.edu:3000/api/scan', //upload.php script, node.js route, or servlet url
+					method: 'POST',
+					// headers: {'header-key': 'header-value'},
+					// withCredentials: true,
+					data: {myObj: $scope.myModelObj},
+					file: file // or list of files: $files for html5 only
+					/* set the file formData name ('Content-Desposition'). Default is 'file' */
+					//fileFormDataName: myFile, //or a list of names for multiple files (html5).
+					/* customize how data is added to formData. See #40#issuecomment-28612000 for sample code */
+					//formDataAppender: function(formData, key, val){}
+		  		}).progress(function(evt) {
+			    	console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
+			  	}).success(function(data, status, headers, config) {
+			    	// file is uploaded successfully
+			    	var idx = $scope.files.indexOf(file);
+			    	$scope.uploadedFile = $scope.files[idx].name + " Successfully Uploaded!";
+			    	$scope.files.splice(idx, 1);
+			  	}).error(function(){
+			  		var idx = $scope.files.indexOf(file);
+			  		$scope.uploadedFile = $scope.files[idx].name + " Failed to Upload!";
+			    	$scope.files.splice(idx, 1);
+			  	});
+				//.error(...)
+				//.then(success, error, progress); 
+				//.xhr(function(xhr){xhr.upload.addEventListener(...)})// access and attach any event listener to XMLHttpRequest.
+			}
+		}
+    };
+
+    $scope.cancelUpload = function () {
+        $modalInstance.dismiss('cancel');
+    };
+}]);
