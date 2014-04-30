@@ -26,9 +26,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-	  <a class="navbar-brand" href="http://spdxhub.ist.unomaha.edu/">Home</a>
-	  <a class="navbar-brand" href="#">Dashboard</a>
-	  <a class="navbar-brand" href="http://spdxhub.ist.unomaha.edu/" target="_blank">fossologyspdx</a>
+	  <a class="navbar-brand" href="index.html">Home</a>
+      <a class="navbar-brand" href="http://spdxhub.ist.unomaha.edu/">SPDX Hub</a>
+      <a class="navbar-brand" href="https://fossologyspdx.ist.unomaha.edu/" target="_blank">Fossology+SPDX</a>
+      <div class="pull-right" ng-controller="pluginCtrl">
+          <a ng-repeat="plugin in plugins" class="navbar-brand" ng-href="{{plugin.url}}">{{plugin.name}}</a>
+      </div>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
             </ul>

@@ -45,6 +45,14 @@ dashApp.factory('SPDXDoc', ['$resource', 'helpers', function($resource, helpers)
     });
 }]);
 
+dashApp.controller('pluginCtrl', ['$scope', '$http', function($scope, $http) {
+    $http.get('./plugins.json').then(function(result){
+        $scope.plugins = result.data;
+    }, function(){
+        $scope.plugins = [];
+    });
+}]);
+
 //***************************************************************************
 // Controllers
 //
