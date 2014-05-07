@@ -76,10 +76,15 @@ function($scope, $routeParams, $modal, SPDXDoc, File) {
     
     SPDXDoc.get({docId: $routeParams.id}, function(spdx) {
         $scope.doc = spdx;
-        // save copies of doc comments and license concluded to check later
-        $scope.doccomment = $scope.doc.document_comment;
-        $scope.licenseconcluded = $scope.doc.package_license_concluded;
+        $scope.cleandoc = angular.fromJson(angular.toJson(spdx, 1));
+        
     });
+    
+    // save a clean copy to check for changes later
+    /*SPDXDoc.get({docId: $routeParams.id}, function(spdx) {
+        $scope.cleandoc = spdx;
+        console.log(spdx);
+    });*/
     
     $scope.getFiles = function () {
         $scope.files = [];
@@ -101,19 +106,14 @@ function($scope, $routeParams, $modal, SPDXDoc, File) {
             resolve: {
                 changes: function () {
                     var changesArray = [];
-                    if ($scope.doccomment != $scope.doc.document_comment) {
-                        changesArray.push({
-                            field: 'Document Comment', 
-                            original: $scope.doccomment, 
-                            change: $scope.doc.document_comment
-                        });
-                    }
-                    if ($scope.licenseconcluded != $scope.doc.package_license_concluded) {
-                         changesArray.push({
-                            field: 'Package License Concluded', 
-                            original: $scope.licenseconcluded, 
-                            change: $scope.doc.package_license_concluded
-                         });
+                    for (var key in $scope.cleandoc) {
+                        if ($scope.cleandoc[key] != $scope.doc[key]) {
+                            changesArray.push({
+                                field: key,
+                                original: $scope.cleandoc[key],
+                                change: $scope.doc[key]
+                            });
+                        }
                     }
                     return changesArray;
                 }
@@ -122,11 +122,7 @@ function($scope, $routeParams, $modal, SPDXDoc, File) {
 
         saveModal.result.then(function () {
             $scope.doc.id = $routeParams.id;
-            SPDXDoc.update({
-                document_comment: $scope.doc.document_comment,
-                licenseconcluded: $scope.doc.package_license_concluded,
-                package_id: $scope.doc.package_id
-            }, $scope.doc);
+            SPDXDoc.update($scope.doc);
         });
     };
     

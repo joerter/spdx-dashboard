@@ -10,11 +10,13 @@
     <tbody>
     <tr>
         <td>Version</td>
-        <td>{{doc.spdx_version}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.spdx_version" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.spdx_version}}</td>
     </tr>
     <tr>
         <td>Data License</td>
-        <td>{{doc.data_license}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.data_license" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.data_license}}</td>
     </tr>
     <tr>
         <td>Document Comment</td>
@@ -30,7 +32,8 @@
     <tbody>
     <tr>
         <td>Creator</td>
-        <td>{{doc.creator}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.creator" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.creator}}</td>
     </tr>
     <tr>
         <td>Created</td>
@@ -42,7 +45,8 @@
     </tr>
     <tr>
         <td>Creator Comment</td>
-        <td>{{doc.creator_comments}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.creator_comments" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.creator_comments}}</td>
     </tr>
     </tbody>
     <thead>
@@ -53,31 +57,38 @@
     <tbody>
     <tr>
         <td>Package Name</td>
-        <td>{{doc.package_name}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_name" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_name}}</td>
     </tr>
     <tr>
         <td>Package Version</td>
-        <td>{{doc.package_version}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_version" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_version}}</td>
     </tr>
     <tr>
         <td>Package Download Location</td>
-        <td>{{doc.package_download_location}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_download_location" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_download_location}}</td>
     </tr>
     <tr>
         <td>Package Summary</td>
-        <td>{{doc.package_summary}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_summary" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_summary}}</td>
     </tr>
     <tr>
         <td>Package File Name</td>
-        <td>{{doc.package_file_name}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_file_name" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_file_name}}</td>
     </tr>
     <tr>
         <td>Package Supplier</td>
-        <td>{{doc.package_supplier}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_supplier" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_supplier}}</td>
     </tr>
     <tr>
         <td>Package Originator</td>
-        <td>{{doc.package_originator}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_originator" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_originator}}</td>
     </tr>
     <tr>
         <td>Package Checksum</td>
@@ -85,15 +96,18 @@
     </tr>
     <tr>
         <td>Package Verification Code</td>
-        <td>{{doc.package_verification_code}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_verification_code" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_verification_code}}</td>
     </tr>
     <tr>
         <td>Package Description</td>
-        <td>{{doc.package_description}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_description" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_description}}</td>
     </tr>
     <tr>
         <td>Package Copyright Text</td>
-        <td>{{doc.package_copyright_text}}</td>
+        <td ng-show="editing"><textarea ng-model="doc.package_copyright_text" class='form-control'></textarea></td>
+        <td ng-show="!editing">{{doc.package_copyright_text}}</td>
     </tr>
     <tr>
         <td>License Declared</td>
