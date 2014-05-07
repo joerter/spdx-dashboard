@@ -20,36 +20,20 @@ dashApp.config(['$routeProvider', '$locationProvider', '$httpProvider', function
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
 
-// factory for helper functions
-dashApp.factory('helpers', function() {
-    var factory = {};
-
-    factory.findByID = function (array, id) {
-        for (var i = 0; i < array.length; i++) {
-            if (array[i].id == id) {
-                return array[i];
-            }
-        }
-        return null;
-    };
-
-    return factory; 
-}); 
-
 // spdxDoc factory for managing getting spdx docs from the server
-dashApp.factory('SPDXDoc', ['$resource', 'helpers', function($resource, helpers) {
+dashApp.factory('SPDXDoc', ['$resource', function($resource) {
     // define the resource object. we can use this to do queries 
-    var serverRoot = "http://localhost:3000";
+    var serverRoot = "http://spdxdev.ist.unomaha.edu:3000";
     return $resource(serverRoot + '/api/spdx/:docId', {docId: '@id'}, {
         update: {method:'PUT'}
     });
 }]);
 
-dashApp.controller('pluginCtrl', ['$scope', '$http', function($scope, $http) {
-    $http.get('./plugins.json').then(function(result){
-        $scope.plugins = result.data;
-    }, function(){
-        $scope.plugins = [];
+dashApp.factory('File', ['$resource', function($resource) {
+    // define the resource object. we can use this to do queries 
+    var serverRoot = "http://spdxdev.ist.unomaha.edu:3000";
+    return $resource(serverRoot + '/api/files/:docId', {docId: '@id'}, {
+        update: {method:'PUT'}
     });
 }]);
 
@@ -60,7 +44,17 @@ dashApp.controller('pluginCtrl', ['$scope', '$http', function($scope, $http) {
 //           displays it
 // docCtrl - Controller for the single doc view, displays a SPDX doc in html
 //          format
+// pluginCtrl - Controller for loading plugins
 //***************************************************************************
+
+// pluginCtrl
+dashApp.controller('pluginCtrl', ['$scope', '$http', function($scope, $http) {
+    $http.get('./plugins.json').then(function(result){
+        $scope.plugins = result.data;
+    }, function(){
+        $scope.plugins = [];
+    });
+}]);
 
 // listCtrl
 dashApp.controller('listCtrl', ['$scope', '$modal', 'SPDXDoc', function($scope, $modal, SPDXDoc) {
@@ -76,14 +70,28 @@ dashApp.controller('listCtrl', ['$scope', '$modal', 'SPDXDoc', function($scope, 
 }]);
 
 // docCtrl
-dashApp.controller('docCtrl', ['$scope', '$routeParams', '$modal', 'SPDXDoc', function($scope, $routeParams, $modal, SPDXDoc) {	
+dashApp.controller('docCtrl', ['$scope', '$routeParams', '$modal', 'SPDXDoc', 'File', 
+function($scope, $routeParams, $modal, SPDXDoc, File) {	
     $scope.editing = false;
+    
     SPDXDoc.get({docId: $routeParams.id}, function(spdx) {
         $scope.doc = spdx;
         // save copies of doc comments and license concluded to check later
         $scope.doccomment = $scope.doc.document_comment;
         $scope.licenseconcluded = $scope.doc.package_license_concluded;
     });
+    
+    $scope.getFiles = function () {
+        $scope.files = [];
+        File.get({docId: $routeParams.id}, function(f) {
+            if (f instanceof Array) {
+                $scope.files = f;
+            }
+            else {
+                $scope.files.push(f);
+            }
+        });
+    }
 
     // open the modal
     $scope.open = function () {

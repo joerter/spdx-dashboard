@@ -104,6 +104,29 @@
         <td ng-show="!editing">{{doc.package_license_concluded}}</td>
         <td ng-show="editing"><textarea ng-model="doc.package_license_concluded" class='form-control'></textarea></td>
     </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th colspan=2>
+                File Information
+                <button ng-click='getFiles()'type="button" class="btn btn-primary pull-right">Load</button>
+            </th>
+        </tr>
+    </thead>
+    <tbody ng-show='files' ng-repeat='file in files'>
+        <tr>
+            <td>File Name</td>
+            <td>{{file.file_name}}</td>
+        </tr>
+        <tr>
+            <td>License Concluded</td>
+            <td>{{file.license_concluded}}</td>
+        </tr>
+        <tr>
+            <td>File Comment</td>
+            <td>{{file.file_comment}}</td>
+        </tr>
+    </tbody>
 </tbody>
 </table>
 <button ng-show="editing" ng-click="open(); editing = !editing" type="button" class="btn btn-primary">Save</button>
